@@ -1,0 +1,28 @@
+{
+	"collectionName": "components_shared_security_features",
+	"info": {
+		"name": "Security Feature",
+		"icon": "shield",
+		"displayName": "Security Feature",
+		"description": "Individual security feature with icon and description"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": false
+		},
+		"icon": {
+			"type": "string",
+			"required": false
+		},
+		"iconColor": {
+			"type": "string",
+			"required": false
+		}
+	}
+}

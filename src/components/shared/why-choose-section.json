@@ -1,0 +1,44 @@
+{
+	"collectionName": "components_shared_why_choose_sections",
+	"info": {
+		"name": "Why Choose Section",
+		"icon": "star",
+		"displayName": "Why Choose Section",
+		"description": "Why Choose section with media logos, title, description and play button"
+	},
+	"options": {},
+	"attributes": {
+		"mediaLogos": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.media-logos",
+			"required": true
+		},
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": true
+		},
+		"playButton": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.button",
+			"required": true
+		},
+		"backgroundVideo": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["videos"]
+		},
+		"backgroundImage": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["images"]
+		}
+	}
+}

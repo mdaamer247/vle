@@ -1,0 +1,26 @@
+{
+	"collectionName": "components_shared_benefit_items",
+	"info": {
+		"name": "Benefit Item",
+		"icon": "checkCircle",
+		"displayName": "Benefit Item",
+		"description": "Individual benefit item with title and description"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": true
+		},
+		"icon": {
+			"type": "enumeration",
+			"enum": ["checkmark", "shield", "clock", "dollar", "star"],
+			"required": false,
+			"default": "checkmark"
+		}
+	}
+}

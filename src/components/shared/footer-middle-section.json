@@ -1,0 +1,22 @@
+{
+	"collectionName": "components_shared_footer_middle_sections",
+	"info": {
+		"name": "Footer Middle Section",
+		"icon": "layout",
+		"displayName": "Footer Middle Section",
+		"description": "Middle section with logo and secondary links"
+	},
+	"options": {},
+	"attributes": {
+		"logo": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.logo"
+		},
+		"secondaryLinks": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.navigation-link"
+		}
+	}
+}

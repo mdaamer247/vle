@@ -1,0 +1,30 @@
+{
+	"collectionName": "components_shared_logos",
+	"info": {
+		"name": "Logo",
+		"icon": "picture",
+		"displayName": "Logo",
+		"description": "Logo component with text and optional image"
+	},
+	"options": {},
+	"attributes": {
+		"primaryText": {
+			"type": "string",
+			"required": true
+		},
+		"secondaryText": {
+			"type": "string",
+			"required": false
+		},
+		"logoImage": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["images"]
+		},
+		"url": {
+			"type": "string",
+			"required": false
+		}
+	}
+}

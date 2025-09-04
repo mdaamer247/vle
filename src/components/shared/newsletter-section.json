@@ -1,0 +1,49 @@
+{
+	"collectionName": "components_shared_newsletter_sections",
+	"info": {
+		"name": "Newsletter Section",
+		"icon": "envelope",
+		"displayName": "Newsletter Section",
+		"description": "Newsletter subscription section with headline, description, and email form"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"subtitle": {
+			"type": "string",
+			"required": true
+		},
+		"emailForm": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.email-subscription-form",
+			"required": true
+		},
+		"backgroundColor": {
+			"type": "enumeration",
+			"enum": ["brown", "terracotta", "burnt-sienna", "dark-brown"],
+			"required": false,
+			"default": "brown"
+		},
+		"titleColor": {
+			"type": "enumeration",
+			"enum": ["off-white", "light-cream", "white", "beige"],
+			"required": false,
+			"default": "off-white"
+		},
+		"subtitleColor": {
+			"type": "enumeration",
+			"enum": ["light-gray", "off-white", "beige", "white"],
+			"required": false,
+			"default": "light-gray"
+		},
+		"hasDecorativeElements": {
+			"type": "boolean",
+			"required": false,
+			"default": true
+		}
+	}
+}

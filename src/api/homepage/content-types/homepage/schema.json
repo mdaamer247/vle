@@ -1,0 +1,76 @@
+{
+	"kind": "singleType",
+	"collectionName": "homepages",
+	"info": {
+		"singularName": "homepage",
+		"pluralName": "homepages",
+		"displayName": "Homepage",
+		"description": "Homepage content management"
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"pluginOptions": {},
+	"attributes": {
+		"heroSection": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.hero-section",
+			"required": true
+		},
+		"serviceFeaturesSection": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.service-features-section",
+			"required": false
+		},
+		"whyChooseSection": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.why-choose-section",
+			"required": false
+		},
+		"pricingSection": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.pricing-section",
+			"required": false
+		},
+		"digitalSecuritySection": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.digital-security-section",
+			"required": false
+		},
+		"savingsSection": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.savings-section",
+			"required": false
+		},
+		"testimonialsSection": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.testimonials-section",
+			"required": false
+		},
+		"globalConnectivitySection": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.global-connectivity-section",
+			"required": false
+		},
+		"newsletterSection": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.newsletter-section",
+			"required": false
+		},
+		"seo": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.seo",
+			"required": false
+		}
+	}
+}

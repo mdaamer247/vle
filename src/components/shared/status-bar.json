@@ -1,0 +1,34 @@
+{
+	"collectionName": "components_shared_status_bars",
+	"info": {
+		"name": "Status Bar",
+		"icon": "clock",
+		"displayName": "Status Bar",
+		"description": "Smartphone status bar information"
+	},
+	"options": {},
+	"attributes": {
+		"time": {
+			"type": "string",
+			"required": true
+		},
+		"networkType": {
+			"type": "enumeration",
+			"enum": ["5G", "4G", "WiFi", "3G"],
+			"required": false,
+			"default": "5G"
+		},
+		"batteryLevel": {
+			"type": "integer",
+			"required": false,
+			"min": 0,
+			"max": 100,
+			"default": 100
+		},
+		"hasWifi": {
+			"type": "boolean",
+			"required": false,
+			"default": true
+		}
+	}
+}

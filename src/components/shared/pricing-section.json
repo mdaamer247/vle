@@ -1,0 +1,42 @@
+{
+	"collectionName": "components_shared_pricing_sections",
+	"info": {
+		"name": "Pricing Section",
+		"icon": "creditCard",
+		"displayName": "Pricing Section",
+		"description": "Main pricing section with plans, promotional badge, and broadband facts"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"subtitle": {
+			"type": "string",
+			"required": false
+		},
+		"promotionalBadge": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.promotional-badge",
+			"required": false
+		},
+		"pricingPlans": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.pricing-plan",
+			"required": true
+		},
+		"broadbandFacts": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.broadband-facts",
+			"required": false
+		},
+		"footnote": {
+			"type": "string",
+			"required": false
+		}
+	}
+}

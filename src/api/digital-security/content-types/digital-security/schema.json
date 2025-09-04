@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "digital_security_pages",
+  "info": {
+    "singularName": "digital-security",
+    "pluralName": "digital-securities",
+    "displayName": "Digital Security Page",
+    "description": "Digital Security landing page content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "heroSection": {
+      "type": "component",
+      "component": "shared.hero-section",
+      "repeatable": false
+    },
+    "pricingSection": {
+      "type": "component",
+      "component": "shared.pricing-section",
+      "repeatable": false
+    },
+    "compatibilitySection": {
+      "type": "component",
+      "component": "shared.compatibility-section",
+      "repeatable": false
+    },
+    "whyMattersSection": {
+      "type": "component",
+      "component": "shared.why-matters-section",
+      "repeatable": false
+    },
+    "whiteGloveSection": {
+      "type": "component",
+      "component": "shared.white-glove-section",
+      "repeatable": false
+    }
+  }
+}

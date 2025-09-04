@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_shared_price_comparisons",
+  "info": {
+    "name": "Price Comparison",
+    "icon": "dollar",
+    "displayName": "Price Comparison",
+    "description": "Price comparison between competitors and VLE Mobile"
+  },
+  "options": {},
+  "attributes": {
+    "competitorLabel": {
+      "type": "string",
+      "required": true
+    },
+    "competitorPrice": {
+      "type": "string",
+      "required": true
+    },
+    "vleLabel": {
+      "type": "string",
+      "required": true
+    },
+    "vlePrice": {
+      "type": "string",
+      "required": true
+    },
+    "competitorColor": {
+      "type": "enumeration",
+      "enum": [
+        "dark-grey",
+        "black",
+        "grey"
+      ],
+      "required": false,
+      "default": "dark-grey"
+    },
+    "vleColor": {
+      "type": "enumeration",
+      "enum": [
+        "orange",
+        "blue",
+        "green"
+      ],
+      "required": false,
+      "default": "orange"
+    }
+  }
+}

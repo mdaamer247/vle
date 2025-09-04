@@ -1,0 +1,20 @@
+{
+	"collectionName": "components_shared_plan_features",
+	"info": {
+		"name": "Plan Feature",
+		"icon": "check",
+		"displayName": "Plan Feature",
+		"description": "Feature included in a pricing plan"
+	},
+	"options": {},
+	"attributes": {
+		"text": {
+			"type": "string",
+			"required": true
+		},
+		"icon": {
+			"type": "string",
+			"required": false
+		}
+	}
+}

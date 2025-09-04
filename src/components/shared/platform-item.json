@@ -1,0 +1,30 @@
+{
+	"collectionName": "components_shared_platform_items",
+	"info": {
+		"name": "Platform Item",
+		"icon": "monitor",
+		"displayName": "Platform Item",
+		"description": "Individual platform compatibility item"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": false
+		},
+		"icon": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["images"]
+		},
+		"iconName": {
+			"type": "string",
+			"required": false
+		}
+	}
+}

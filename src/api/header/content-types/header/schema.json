@@ -1,0 +1,26 @@
+{
+	"kind": "singleType",
+	"collectionName": "headers",
+	"info": {
+		"singularName": "header",
+		"pluralName": "headers",
+		"displayName": "Header",
+		"description": "Global header for all pages"
+	},
+	"options": {
+		"draftAndPublish": false
+	},
+	"pluginOptions": {},
+	"attributes": {
+		"utilityBar": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.utility-bar"
+		},
+		"mainNavigation": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.main-navigation"
+		}
+	}
+}

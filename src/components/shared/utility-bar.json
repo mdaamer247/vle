@@ -1,0 +1,34 @@
+{
+	"collectionName": "components_shared_utility_bars",
+	"info": {
+		"name": "Utility Bar",
+		"icon": "phone",
+		"displayName": "Utility Bar",
+		"description": "Top utility bar with contact info and quick links"
+	},
+	"options": {},
+	"attributes": {
+		"contactText": {
+			"type": "string",
+			"required": true
+		},
+		"phoneNumber": {
+			"type": "string",
+			"required": true
+		},
+		"scheduleCallUrl": {
+			"type": "string",
+			"required": false
+		},
+		"quickLinks": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.navigation-link"
+		},
+		"languageSelector": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.language-selector"
+		}
+	}
+}

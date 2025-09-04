@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_shared_digital_security_sections",
+  "info": {
+    "name": "Digital Security Section",
+    "icon": "shield",
+    "displayName": "Digital Security Section",
+    "description": "Digital Security Highlight section with main content and feature cards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "ctaButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.button",
+      "required": true
+    },
+    "featureCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.security-feature-card",
+      "required": true
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backgroundColor": {
+      "type": "enumeration",
+      "enum": [
+        "dark",
+        "black",
+        "blue",
+        "green"
+      ],
+      "required": false,
+      "default": "dark"
+    }
+  }
+}

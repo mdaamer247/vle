@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_shared_global_connectivity_sections",
+  "info": {
+    "name": "Global Connectivity Section",
+    "icon": "globe",
+    "displayName": "Global Connectivity Section",
+    "description": "Global connectivity section with country coverage and plans"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "ctaButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.button",
+      "required": true
+    },
+    "countryButtons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.country-button",
+      "required": true
+    },
+    "backgroundColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "light-grey",
+        "off-white"
+      ],
+      "required": false,
+      "default": "white"
+    },
+    "gridColumns": {
+      "type": "integer",
+      "required": false,
+      "default": 4,
+      "min": 2,
+      "max": 6
+    }
+  }
+}

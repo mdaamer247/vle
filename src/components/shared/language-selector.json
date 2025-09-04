@@ -1,0 +1,24 @@
+{
+	"collectionName": "components_shared_language_selectors",
+	"info": {
+		"name": "Language Selector",
+		"icon": "globe",
+		"displayName": "Language Selector",
+		"description": "Language selector with flag and dropdown"
+	},
+	"options": {},
+	"attributes": {
+		"currentLanguage": {
+			"type": "string",
+			"required": true
+		},
+		"flagIcon": {
+			"type": "string",
+			"required": false
+		},
+		"hasDropdown": {
+			"type": "boolean",
+			"default": true
+		}
+	}
+}

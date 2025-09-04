@@ -1,0 +1,44 @@
+{
+	"collectionName": "components_shared_smartphone_displays",
+	"info": {
+		"name": "Smartphone Display",
+		"icon": "mobile",
+		"displayName": "Smartphone Display",
+		"description": "Smartphone mockup displaying app interface"
+	},
+	"options": {},
+	"attributes": {
+		"appName": {
+			"type": "string",
+			"required": true
+		},
+		"statusBar": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.status-bar",
+			"required": false
+		},
+		"alertMessage": {
+			"type": "string",
+			"required": true
+		},
+		"alertDetails": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.alert-detail",
+			"required": false
+		},
+		"ctaButton": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.button",
+			"required": false
+		},
+		"backgroundImage": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["images"]
+		}
+	}
+}

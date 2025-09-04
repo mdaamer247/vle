@@ -1,0 +1,40 @@
+{
+	"collectionName": "components_shared_security_features_sections",
+	"info": {
+		"name": "Security Features Section",
+		"icon": "lock",
+		"displayName": "Security Features Section",
+		"description": "AI Digital Security features section"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"subtitle": {
+			"type": "text",
+			"required": false
+		},
+		"description": {
+			"type": "text",
+			"required": false
+		},
+		"backgroundImage": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["images"]
+		},
+		"features": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.security-feature"
+		},
+		"insuranceInfo": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.insurance-info"
+		}
+	}
+}

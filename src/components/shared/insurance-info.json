@@ -1,0 +1,24 @@
+{
+	"collectionName": "components_shared_insurance_infos",
+	"info": {
+		"name": "Insurance Info",
+		"icon": "shield-check",
+		"displayName": "Insurance Info",
+		"description": "Insurance coverage information"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": false
+		},
+		"icon": {
+			"type": "string",
+			"required": false
+		}
+	}
+}

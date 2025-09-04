@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_shared_line_selectors",
+  "info": {
+    "name": "Line Selector",
+    "icon": "slider",
+    "displayName": "Line Selector",
+    "description": "Interactive slider for selecting number of lines"
+  },
+  "options": {},
+  "attributes": {
+    "minLines": {
+      "type": "integer",
+      "required": false,
+      "default": 1,
+      "min": 1
+    },
+    "maxLines": {
+      "type": "integer",
+      "required": false,
+      "default": 5,
+      "min": 1
+    },
+    "defaultLines": {
+      "type": "integer",
+      "required": false,
+      "default": 2,
+      "min": 1
+    },
+    "trackColor": {
+      "type": "enumeration",
+      "enum": [
+        "grey",
+        "light-grey",
+        "dark-grey"
+      ],
+      "required": false,
+      "default": "grey"
+    },
+    "activeColor": {
+      "type": "enumeration",
+      "enum": [
+        "orange",
+        "blue",
+        "green"
+      ],
+      "required": false,
+      "default": "orange"
+    },
+    "handleColor": {
+      "type": "enumeration",
+      "enum": [
+        "orange",
+        "blue",
+        "green"
+      ],
+      "required": false,
+      "default": "orange"
+    }
+  }
+}

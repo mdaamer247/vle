@@ -1,0 +1,26 @@
+{
+	"collectionName": "components_shared_service_items",
+	"info": {
+		"name": "Service Item",
+		"icon": "service",
+		"displayName": "Service Item",
+		"description": "Individual service item with image and description"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": false
+		},
+		"image": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["images"]
+		}
+	}
+}

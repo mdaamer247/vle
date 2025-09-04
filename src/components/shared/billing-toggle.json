@@ -1,0 +1,25 @@
+{
+	"collectionName": "components_shared_billing_toggles",
+	"info": {
+		"name": "Billing Toggle",
+		"icon": "toggle",
+		"displayName": "Billing Toggle",
+		"description": "Toggle between monthly and yearly billing"
+	},
+	"options": {},
+	"attributes": {
+		"monthlyLabel": {
+			"type": "string",
+			"default": "Monthly"
+		},
+		"yearlyLabel": {
+			"type": "string",
+			"default": "Yearly"
+		},
+		"defaultSelection": {
+			"type": "enumeration",
+			"enum": ["monthly", "yearly"],
+			"default": "monthly"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"collectionName": "components_shared_main_navigations",
+	"info": {
+		"name": "Main Navigation",
+		"icon": "menu",
+		"displayName": "Main Navigation",
+		"description": "Main navigation bar with logo and menu items"
+	},
+	"options": {},
+	"attributes": {
+		"logo": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.logo"
+		},
+		"navigationItems": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.navigation-link"
+		},
+		"ctaButtons": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.button"
+		}
+	}
+}

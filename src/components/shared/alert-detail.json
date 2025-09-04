@@ -1,0 +1,30 @@
+{
+	"collectionName": "components_shared_alert_details",
+	"info": {
+		"name": "Alert Detail",
+		"icon": "alert",
+		"displayName": "Alert Detail",
+		"description": "Individual alert detail item"
+	},
+	"options": {},
+	"attributes": {
+		"date": {
+			"type": "string",
+			"required": true
+		},
+		"message": {
+			"type": "string",
+			"required": true
+		},
+		"severity": {
+			"type": "enumeration",
+			"enum": ["critical", "warning", "info", "success"],
+			"required": false,
+			"default": "critical"
+		},
+		"userInitials": {
+			"type": "string",
+			"required": false
+		}
+	}
+}

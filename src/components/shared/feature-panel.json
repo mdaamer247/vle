@@ -1,0 +1,41 @@
+{
+	"collectionName": "components_shared_feature_panels",
+	"info": {
+		"name": "Feature Panel",
+		"icon": "layout",
+		"displayName": "Feature Panel",
+		"description": "Feature panel component for showcasing service features"
+	},
+	"options": {},
+	"attributes": {
+		"image": {
+			"type": "media",
+			"multiple": false,
+			"required": true,
+			"allowedTypes": ["images"]
+		},
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": false
+		},
+		"icon": {
+			"type": "enumeration",
+			"enum": ["chart", "lock", "wifi", "shield", "checkmark"],
+			"required": false
+		},
+		"borderColor": {
+			"type": "enumeration",
+			"enum": ["orange", "red", "green", "blue", "purple"],
+			"required": false
+		},
+		"showProgressBar": {
+			"type": "boolean",
+			"required": false,
+			"default": false
+		}
+	}
+}
