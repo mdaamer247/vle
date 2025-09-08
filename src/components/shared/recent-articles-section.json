@@ -1,0 +1,22 @@
+{
+	"collectionName": "components_shared_recent_articles_sections",
+	"info": {
+		"displayName": "Recent Articles Section",
+		"description": "Section displaying recent articles in a grid layout"
+	},
+	"options": {
+		"timestamps": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true,
+			"default": "Recent Article"
+		},
+		"description": {
+			"type": "text",
+			"required": true,
+			"default": "Stay informed about mobile technology and digital security."
+		}
+	}
+}

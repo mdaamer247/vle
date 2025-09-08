@@ -1,0 +1,28 @@
+{
+	"collectionName": "components_shared_resource_hero_sections",
+	"info": {
+		"displayName": "Resource Hero Section",
+		"description": "Hero section for resource page with title and description"
+	},
+	"options": {
+		"timestamps": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true,
+			"default": "Resource Center"
+		},
+		"description": {
+			"type": "text",
+			"required": true,
+			"default": "Stay informed about mobile technology and digital security."
+		},
+		"backgroundImage": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["images"]
+		}
+	}
+}

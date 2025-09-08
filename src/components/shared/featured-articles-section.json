@@ -1,0 +1,22 @@
+{
+	"collectionName": "components_shared_featured_articles_sections",
+	"info": {
+		"displayName": "Featured Articles Section",
+		"description": "Section displaying featured articles in a grid layout"
+	},
+	"options": {
+		"timestamps": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true,
+			"default": "Featured Articles"
+		},
+		"description": {
+			"type": "text",
+			"required": true,
+			"default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+		}
+	}
+}

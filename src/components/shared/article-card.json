@@ -1,0 +1,37 @@
+{
+	"collectionName": "components_shared_article_cards",
+	"info": {
+		"displayName": "Article Card",
+		"description": "Card component for displaying individual articles"
+	},
+	"options": {
+		"timestamps": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": true
+		},
+		"image": {
+			"type": "media",
+			"multiple": false,
+			"required": true,
+			"allowedTypes": ["images"]
+		},
+		"readMoreButton": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.button",
+			"required": true
+		},
+		"article": {
+			"type": "relation",
+			"relation": "oneToOne",
+			"target": "api::article.article"
+		}
+	}
+}

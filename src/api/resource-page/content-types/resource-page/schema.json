@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "resource_pages",
+  "info": {
+    "singularName": "resource-page",
+    "pluralName": "resource-pages",
+    "displayName": "Resource Page",
+    "description": "Resource page content management"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "component",
+      "component": "shared.resource-hero-section",
+      "repeatable": false,
+      "required": true
+    },
+    "featuredArticlesSection": {
+      "type": "component",
+      "component": "shared.featured-articles-section",
+      "repeatable": false,
+      "required": false
+    },
+    "recentArticlesSection": {
+      "type": "component",
+      "component": "shared.recent-articles-section",
+      "repeatable": false,
+      "required": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": false
+    }
+  }
+}

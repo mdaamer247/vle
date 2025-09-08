@@ -19,6 +19,25 @@ export interface SharedAlertDetail extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedArticleCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_article_cards';
+  info: {
+    description: 'Card component for displaying individual articles';
+    displayName: 'Article Card';
+  };
+  options: {
+    timestamps: true;
+  };
+  attributes: {
+    article: Schema.Attribute.Relation<'oneToOne', 'api::article.article'>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    readMoreButton: Schema.Attribute.Component<'shared.button', false> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedBenefitItem extends Struct.ComponentSchema {
   collectionName: 'components_shared_benefit_items';
   info: {
@@ -110,6 +129,39 @@ export interface SharedButton extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'_self'>;
     text: Schema.Attribute.String & Schema.Attribute.Required;
     url: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCategoryFilter extends Struct.ComponentSchema {
+  collectionName: 'components_shared_category_filters';
+  info: {
+    description: 'Filter buttons for article categories';
+    displayName: 'Category Filter';
+  };
+  options: {
+    timestamps: true;
+  };
+  attributes: {
+    categories: Schema.Attribute.Component<
+      'shared.category-filter-item',
+      true
+    > &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface SharedCategoryFilterItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_category_filter_items';
+  info: {
+    description: 'Individual category filter button';
+    displayName: 'Category Filter Item';
+  };
+  options: {
+    timestamps: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -260,6 +312,25 @@ export interface SharedFeaturePanel extends Struct.ComponentSchema {
     showProgressBar: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedFeaturedArticlesSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_featured_articles_sections';
+  info: {
+    description: 'Section displaying featured articles in a grid layout';
+    displayName: 'Featured Articles Section';
+  };
+  options: {
+    timestamps: true;
+  };
+  attributes: {
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Featured Articles'>;
   };
 }
 
@@ -695,6 +766,45 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedRecentArticlesSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_recent_articles_sections';
+  info: {
+    description: 'Section displaying recent articles in a grid layout';
+    displayName: 'Recent Articles Section';
+  };
+  options: {
+    timestamps: true;
+  };
+  attributes: {
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Stay informed about mobile technology and digital security.'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Recent Article'>;
+  };
+}
+
+export interface SharedResourceHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_resource_hero_sections';
+  info: {
+    description: 'Hero section for resource page with title and description';
+    displayName: 'Resource Hero Section';
+  };
+  options: {
+    timestamps: true;
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Stay informed about mobile technology and digital security.'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Resource Center'>;
+  };
+}
+
 export interface SharedRichText extends Struct.ComponentSchema {
   collectionName: 'components_shared_rich_texts';
   info: {
@@ -1105,11 +1215,14 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.alert-detail': SharedAlertDetail;
+      'shared.article-card': SharedArticleCard;
       'shared.benefit-item': SharedBenefitItem;
       'shared.benefits-section': SharedBenefitsSection;
       'shared.billing-toggle': SharedBillingToggle;
       'shared.broadband-facts': SharedBroadbandFacts;
       'shared.button': SharedButton;
+      'shared.category-filter': SharedCategoryFilter;
+      'shared.category-filter-item': SharedCategoryFilterItem;
       'shared.compatibility-section': SharedCompatibilitySection;
       'shared.copyright-info': SharedCopyrightInfo;
       'shared.country-button': SharedCountryButton;
@@ -1117,6 +1230,7 @@ declare module '@strapi/strapi' {
       'shared.email-subscription-form': SharedEmailSubscriptionForm;
       'shared.feature-item': SharedFeatureItem;
       'shared.feature-panel': SharedFeaturePanel;
+      'shared.featured-articles-section': SharedFeaturedArticlesSection;
       'shared.footer-bottom-section': SharedFooterBottomSection;
       'shared.footer-link-column': SharedFooterLinkColumn;
       'shared.footer-middle-section': SharedFooterMiddleSection;
@@ -1139,6 +1253,8 @@ declare module '@strapi/strapi' {
       'shared.pricing-section': SharedPricingSection;
       'shared.promotional-badge': SharedPromotionalBadge;
       'shared.quote': SharedQuote;
+      'shared.recent-articles-section': SharedRecentArticlesSection;
+      'shared.resource-hero-section': SharedResourceHeroSection;
       'shared.rich-text': SharedRichText;
       'shared.savings-indicator': SharedSavingsIndicator;
       'shared.savings-section': SharedSavingsSection;
