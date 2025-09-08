@@ -1,0 +1,25 @@
+{
+	"collectionName": "components_shared_contact_options_sections",
+	"info": {
+		"displayName": "Contact Options Section",
+		"description": "Section with title, description, and grid of contact method cards"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true,
+			"default": "Contact Options"
+		},
+		"description": {
+			"type": "text",
+			"required": false
+		},
+		"contactMethods": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.contact-method-card",
+			"required": false
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"collectionName": "components_shared_quick_links_sections",
+	"info": {
+		"displayName": "Quick Links Section",
+		"description": "Section with title, description, and grid of quick link cards"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true,
+			"default": "Quick Links"
+		},
+		"description": {
+			"type": "text",
+			"required": false
+		},
+		"quickLinks": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.quick-link-item",
+			"required": false
+		}
+	}
+}

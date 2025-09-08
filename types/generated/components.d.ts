@@ -197,6 +197,43 @@ export interface SharedContactMethod extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedContactMethodCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contact_method_cards';
+  info: {
+    description: 'Individual contact method card with icon, title, description, and contact detail';
+    displayName: 'Contact Method Card';
+  };
+  attributes: {
+    contactDetail: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    link: Schema.Attribute.String;
+    methodType: Schema.Attribute.Enumeration<
+      ['live-chat', 'phone', 'email', 'ticket', 'office']
+    >;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedContactOptionsSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contact_options_sections';
+  info: {
+    description: 'Section with title, description, and grid of contact method cards';
+    displayName: 'Contact Options Section';
+  };
+  attributes: {
+    contactMethods: Schema.Attribute.Component<
+      'shared.contact-method-card',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Contact Options'>;
+  };
+}
+
 export interface SharedContactSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_contact_sections';
   info: {
@@ -779,6 +816,40 @@ export interface SharedPromotionalBadge extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedQuickLinkItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_quick_link_items';
+  info: {
+    description: 'Individual quick link card with image, title, and description';
+    displayName: 'Quick Link Item';
+  };
+  attributes: {
+    backgroundColor: Schema.Attribute.Enumeration<
+      ['grey', 'purple', 'green', 'yellow', 'light-grey']
+    > &
+      Schema.Attribute.DefaultTo<'grey'>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    link: Schema.Attribute.String;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedQuickLinksSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_quick_links_sections';
+  info: {
+    description: 'Section with title, description, and grid of quick link cards';
+    displayName: 'Quick Links Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    quickLinks: Schema.Attribute.Component<'shared.quick-link-item', true>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Quick Links'>;
+  };
+}
+
 export interface SharedQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_quotes';
   info: {
@@ -807,6 +878,32 @@ export interface SharedRecentArticlesSection extends Struct.ComponentSchema {
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Recent Article'>;
+  };
+}
+
+export interface SharedResourceCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_resource_cards';
+  info: {
+    description: 'Individual self help resource card with image, title, description, and read more button';
+    displayName: 'Resource Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    link: Schema.Attribute.String;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    readMoreButton: Schema.Attribute.Component<'shared.button', false>;
+    resourceType: Schema.Attribute.Enumeration<
+      [
+        'getting-started',
+        'troubleshooting',
+        'video-tutorials',
+        'compatibility-checker',
+        'documentation',
+        'faq',
+      ]
+    >;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -938,6 +1035,21 @@ export interface SharedSecurityFeaturesSection extends Struct.ComponentSchema {
     insuranceInfo: Schema.Attribute.Component<'shared.insurance-info', false>;
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedSelfHelpResourcesSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_self_help_resources_sections';
+  info: {
+    description: 'Section with title, description, and grid of self help resource cards';
+    displayName: 'Self Help Resources Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    resourceCards: Schema.Attribute.Component<'shared.resource-card', true>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Self Help Resources'>;
   };
 }
 
@@ -1104,6 +1216,24 @@ export interface SharedStatusBar extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSupportHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_support_hero_sections';
+  info: {
+    description: 'Hero section for support center page with title, tagline, and hero image';
+    displayName: 'Support Hero Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heroImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    tagline: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<"We're here to help.">;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Support Center'>;
+  };
+}
+
 export interface SharedTabContent extends Struct.ComponentSchema {
   collectionName: 'components_shared_tab_contents';
   info: {
@@ -1250,6 +1380,8 @@ declare module '@strapi/strapi' {
       'shared.category-filter-item': SharedCategoryFilterItem;
       'shared.compatibility-section': SharedCompatibilitySection;
       'shared.contact-method': SharedContactMethod;
+      'shared.contact-method-card': SharedContactMethodCard;
+      'shared.contact-options-section': SharedContactOptionsSection;
       'shared.contact-section': SharedContactSection;
       'shared.copyright-info': SharedCopyrightInfo;
       'shared.country-button': SharedCountryButton;
@@ -1279,8 +1411,11 @@ declare module '@strapi/strapi' {
       'shared.pricing-plan': SharedPricingPlan;
       'shared.pricing-section': SharedPricingSection;
       'shared.promotional-badge': SharedPromotionalBadge;
+      'shared.quick-link-item': SharedQuickLinkItem;
+      'shared.quick-links-section': SharedQuickLinksSection;
       'shared.quote': SharedQuote;
       'shared.recent-articles-section': SharedRecentArticlesSection;
+      'shared.resource-card': SharedResourceCard;
       'shared.resource-hero-section': SharedResourceHeroSection;
       'shared.rich-text': SharedRichText;
       'shared.savings-indicator': SharedSavingsIndicator;
@@ -1288,6 +1423,7 @@ declare module '@strapi/strapi' {
       'shared.security-feature': SharedSecurityFeature;
       'shared.security-feature-card': SharedSecurityFeatureCard;
       'shared.security-features-section': SharedSecurityFeaturesSection;
+      'shared.self-help-resources-section': SharedSelfHelpResourcesSection;
       'shared.seo': SharedSeo;
       'shared.service-features-section': SharedServiceFeaturesSection;
       'shared.service-item': SharedServiceItem;
@@ -1298,6 +1434,7 @@ declare module '@strapi/strapi' {
       'shared.social-media-link': SharedSocialMediaLink;
       'shared.statistic-item': SharedStatisticItem;
       'shared.status-bar': SharedStatusBar;
+      'shared.support-hero-section': SharedSupportHeroSection;
       'shared.tab-content': SharedTabContent;
       'shared.testimonial-item': SharedTestimonialItem;
       'shared.testimonials-section': SharedTestimonialsSection;

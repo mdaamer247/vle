@@ -885,6 +885,52 @@ export interface ApiResourcePageResourcePage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiSupportCenterSupportCenter extends Struct.SingleTypeSchema {
+  collectionName: 'support_centers';
+  info: {
+    description: 'Support Center page content management';
+    displayName: 'Support Center Page';
+    pluralName: 'support-centers';
+    singularName: 'support-center';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contactOptionsSection: Schema.Attribute.Component<
+      'shared.contact-options-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroSection: Schema.Attribute.Component<
+      'shared.support-hero-section',
+      false
+    > &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::support-center.support-center'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    quickLinksSection: Schema.Attribute.Component<
+      'shared.quick-links-section',
+      false
+    >;
+    selfHelpResourcesSection: Schema.Attribute.Component<
+      'shared.self-help-resources-section',
+      false
+    >;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1408,6 +1454,7 @@ declare module '@strapi/strapi' {
       'api::header.header': ApiHeaderHeader;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::resource-page.resource-page': ApiResourcePageResourcePage;
+      'api::support-center.support-center': ApiSupportCenterSupportCenter;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
