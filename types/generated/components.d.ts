@@ -181,6 +181,36 @@ export interface SharedCompatibilitySection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedContactMethod extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contact_methods';
+  info: {
+    description: 'Individual contact method item';
+    displayName: 'Contact Method';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    type: Schema.Attribute.Enumeration<['email', 'phone', 'chat', 'ticket']> &
+      Schema.Attribute.Required;
+    value: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedContactSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contact_sections';
+  info: {
+    description: 'Contact section for FAQ page';
+    displayName: 'Contact Section';
+  };
+  attributes: {
+    ctaButton: Schema.Attribute.Component<'shared.button', false>;
+    description: Schema.Attribute.Text;
+    images: Schema.Attribute.Media<'images' | 'files', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedCopyrightInfo extends Struct.ComponentSchema {
   collectionName: 'components_shared_copyright_infos';
   info: {
@@ -420,12 +450,7 @@ export interface SharedHeroSection extends Struct.ComponentSchema {
     name: 'Hero Section';
   };
   attributes: {
-    ctaButton: Schema.Attribute.Component<'shared.button', false>;
-    featurePanels: Schema.Attribute.Component<'shared.feature-panel', true>;
-    highlightedTitle: Schema.Attribute.String;
     mainTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    poweredBy: Schema.Attribute.String;
-    poweredByLogo: Schema.Attribute.Media<'images'>;
     subtitle: Schema.Attribute.String;
   };
 }
@@ -1224,6 +1249,8 @@ declare module '@strapi/strapi' {
       'shared.category-filter': SharedCategoryFilter;
       'shared.category-filter-item': SharedCategoryFilterItem;
       'shared.compatibility-section': SharedCompatibilitySection;
+      'shared.contact-method': SharedContactMethod;
+      'shared.contact-section': SharedContactSection;
       'shared.copyright-info': SharedCopyrightInfo;
       'shared.country-button': SharedCountryButton;
       'shared.digital-security-section': SharedDigitalSecuritySection;

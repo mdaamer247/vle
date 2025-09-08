@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_contact_sections",
+  "info": {
+    "displayName": "Contact Section",
+    "description": "Contact section for FAQ page"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "ctaButton": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false,
+      "required": false
+    }
+  }
+}

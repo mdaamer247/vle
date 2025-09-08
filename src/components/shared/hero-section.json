@@ -1,46 +1,20 @@
 {
-	"collectionName": "components_shared_hero_sections",
-	"info": {
-		"name": "Hero Section",
-		"icon": "star",
-		"displayName": "Hero Section",
-		"description": "Hero section component for landing pages"
-	},
-	"options": {},
-	"attributes": {
-		"mainTitle": {
-			"type": "string",
-			"required": true
-		},
-		"highlightedTitle": {
-			"type": "string",
-			"required": false
-		},
-		"subtitle": {
-			"type": "string",
-			"required": false
-		},
-		"poweredBy": {
-			"type": "string",
-			"required": false
-		},
-		"poweredByLogo": {
-			"type": "media",
-			"multiple": false,
-			"required": false,
-			"allowedTypes": ["images"]
-		},
-		"ctaButton": {
-			"type": "component",
-			"repeatable": false,
-			"component": "shared.button",
-			"required": false
-		},
-		"featurePanels": {
-			"type": "component",
-			"repeatable": true,
-			"component": "shared.feature-panel",
-			"required": false
-		}
-	}
+  "collectionName": "components_shared_hero_sections",
+  "info": {
+    "name": "Hero Section",
+    "icon": "star",
+    "displayName": "Hero Section",
+    "description": "Hero section component for landing pages"
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": false
+    }
+  }
 }

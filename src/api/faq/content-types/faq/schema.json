@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "faqs",
+  "info": {
+    "singularName": "faq",
+    "pluralName": "faqs",
+    "displayName": "FAQ Page",
+    "description": "Frequently Asked Questions page content management"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "component",
+      "component": "shared.hero-section",
+      "repeatable": false,
+      "required": true
+    },
+    "contactSection": {
+      "type": "component",
+      "component": "shared.contact-section",
+      "repeatable": false,
+      "required": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": false
+    }
+  }
+}
