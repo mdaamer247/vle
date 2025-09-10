@@ -117,13 +117,7 @@ export default factories.createCoreController(
 					globalConnectivitySection: {
 						populate: {
 							ctaButton: true,
-							countryButtons: {
-								populate: {
-									flagIcon: {
-										fields: ["id", "alternativeText", "url"],
-									},
-								},
-							},
+							countryButtons: true,
 						},
 					},
 					newsletterSection: {

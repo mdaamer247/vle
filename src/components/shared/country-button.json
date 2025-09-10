@@ -12,39 +12,31 @@
       "type": "string",
       "required": true
     },
-    "flagIcon": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "countryCode": {
       "type": "string",
       "required": false
     },
     "backgroundColor": {
       "type": "enumeration",
+      "required": false,
+      "default": "off-white",
       "enum": [
         "off-white",
         "light-grey",
         "white",
         "beige"
-      ],
-      "required": false,
-      "default": "off-white"
+      ]
     },
     "textColor": {
       "type": "enumeration",
+      "required": false,
+      "default": "black",
       "enum": [
         "black",
         "dark-grey",
         "blue",
         "green"
-      ],
-      "required": false,
-      "default": "black"
+      ]
     },
     "isAvailable": {
       "type": "boolean",

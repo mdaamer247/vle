@@ -48,6 +48,7 @@ export interface SharedBenefitItem extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
+    descriptionText: Schema.Attribute.Blocks;
     icon: Schema.Attribute.Enumeration<
       ['checkmark', 'shield', 'clock', 'dollar', 'star']
     > &
@@ -67,7 +68,7 @@ export interface SharedBenefitsSection extends Struct.ComponentSchema {
   attributes: {
     benefits: Schema.Attribute.Component<'shared.benefit-item', true>;
     ctaButton: Schema.Attribute.Component<'shared.button', false>;
-    description: Schema.Attribute.Text;
+    desc: Schema.Attribute.Blocks;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -277,7 +278,6 @@ export interface SharedCountryButton extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'off-white'>;
     countryCode: Schema.Attribute.String;
     countryName: Schema.Attribute.String & Schema.Attribute.Required;
-    flagIcon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     isAvailable: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     textColor: Schema.Attribute.Enumeration<
       ['black', 'dark-grey', 'blue', 'green']
@@ -343,6 +343,17 @@ export interface SharedEmailSubscriptionForm extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFaqHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_faq_heroes';
+  info: {
+    displayName: 'FAQ Hero';
+  };
+  attributes: {
+    mainTitle: Schema.Attribute.String;
+    subTitle: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFeatureItem extends Struct.ComponentSchema {
   collectionName: 'components_shared_feature_items';
   info: {
@@ -368,13 +379,7 @@ export interface SharedFeaturePanel extends Struct.ComponentSchema {
     name: 'Feature Panel';
   };
   attributes: {
-    borderColor: Schema.Attribute.Enumeration<
-      ['orange', 'red', 'green', 'blue', 'purple']
-    >;
     description: Schema.Attribute.Text;
-    icon: Schema.Attribute.Enumeration<
-      ['chart', 'lock', 'wifi', 'shield', 'checkmark']
-    >;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     showProgressBar: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
@@ -487,7 +492,13 @@ export interface SharedHeroSection extends Struct.ComponentSchema {
     name: 'Hero Section';
   };
   attributes: {
+    ctaButton: Schema.Attribute.Component<'shared.button', false>;
+    featureImages: Schema.Attribute.Media<'images' | 'files', true>;
+    featurePanels: Schema.Attribute.Component<'shared.feature-panel', true>;
+    highlightedTitle: Schema.Attribute.String;
     mainTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    poweredBy: Schema.Attribute.String;
+    poweredByLogo: Schema.Attribute.Media<'images'>;
     subtitle: Schema.Attribute.String;
   };
 }
@@ -1387,6 +1398,7 @@ declare module '@strapi/strapi' {
       'shared.country-button': SharedCountryButton;
       'shared.digital-security-section': SharedDigitalSecuritySection;
       'shared.email-subscription-form': SharedEmailSubscriptionForm;
+      'shared.faq-hero': SharedFaqHero;
       'shared.feature-item': SharedFeatureItem;
       'shared.feature-panel': SharedFeaturePanel;
       'shared.featured-articles-section': SharedFeaturedArticlesSection;

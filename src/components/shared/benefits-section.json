@@ -12,9 +12,8 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text",
-      "required": false
+    "desc": {
+      "type": "blocks"
     },
     "ctaButton": {
       "type": "component",

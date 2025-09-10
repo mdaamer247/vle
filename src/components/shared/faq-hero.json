@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_faq_heroes",
+  "info": {
+    "displayName": "FAQ Hero"
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

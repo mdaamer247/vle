@@ -14,9 +14,8 @@
   "attributes": {
     "heroSection": {
       "type": "component",
-      "component": "shared.hero-section",
-      "repeatable": false,
-      "required": true
+      "component": "shared.faq-hero",
+      "repeatable": false
     },
     "contactSection": {
       "type": "component",

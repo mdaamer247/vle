@@ -12,9 +12,45 @@
       "type": "string",
       "required": true
     },
+    "highlightedTitle": {
+      "type": "string",
+      "required": false
+    },
     "subtitle": {
       "type": "string",
       "required": false
+    },
+    "poweredBy": {
+      "type": "string",
+      "required": false
+    },
+    "poweredByLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ctaButton": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false,
+      "required": false
+    },
+    "featurePanels": {
+      "type": "component",
+      "component": "shared.feature-panel",
+      "repeatable": true,
+      "required": false
+    },
+    "featureImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     }
   }
 }
