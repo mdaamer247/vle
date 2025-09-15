@@ -515,13 +515,12 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiBlogCategoryBlogCategory
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'blog_categories';
+export interface ApiBlogPageBlogPage extends Struct.SingleTypeSchema {
+  collectionName: 'blog_pages';
   info: {
-    displayName: 'Blog Category';
-    pluralName: 'blog-categories';
-    singularName: 'blog-category';
+    displayName: 'Blog Page';
+    pluralName: 'blog-pages';
+    singularName: 'blog-page';
   };
   options: {
     draftAndPublish: true;
@@ -533,10 +532,11 @@ export interface ApiBlogCategoryBlogCategory
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::blog-category.blog-category'
+      'api::blog-page.blog-page'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1474,7 +1474,7 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
-      'api::blog-category.blog-category': ApiBlogCategoryBlogCategory;
+      'api::blog-page.blog-page': ApiBlogPageBlogPage;
       'api::category.category': ApiCategoryCategory;
       'api::digital-security.digital-security': ApiDigitalSecurityDigitalSecurity;
       'api::faq-category.faq-category': ApiFaqCategoryFaqCategory;

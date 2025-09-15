@@ -25,6 +25,9 @@ export default factories.createCoreController(
 									},
 								},
 							},
+							featureImages: {
+								fields: ["id", "alternativeText", "url"],
+							},
 						},
 					},
 					serviceFeaturesSection: {
@@ -89,7 +92,13 @@ export default factories.createCoreController(
 					digitalSecuritySection: {
 						populate: {
 							ctaButton: true,
-							featureCards: true,
+							featureCards: {
+								populate: {
+									icon: {
+										fields: ["id", "alternativeText", "url"],
+									},
+								},
+							},
 							backgroundImage: {
 								fields: ["id", "alternativeText", "url"],
 							},
