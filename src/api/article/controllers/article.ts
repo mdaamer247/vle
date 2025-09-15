@@ -106,5 +106,52 @@ export default factories.createCoreController(
 				ctx.throw(500, "Error fetching recent articles", { error });
 			}
 		},
+
+		async findById(ctx) {
+			const { articleId } = ctx.params;
+
+			try {
+				const article = await strapi.entityService.findOne(
+					"api::article.article",
+					articleId,
+					{
+						populate: {
+							cover: {
+								fields: ["id", "alternativeText", "url", "width", "height"],
+							},
+							author: {
+								fields: ["id", "name", "email"],
+								populate: {
+									avatar: {
+										fields: ["id", "alternativeText", "url"],
+									},
+								},
+							},
+							category: {
+								fields: ["id", "name", "slug"],
+							},
+							socialMedia: {
+								fields: ["platform", "url"],
+								populate: {
+									icon: {
+										fields: ["id", "alternativeText", "url"],
+									},
+								},
+							},
+						},
+					}
+				);
+
+				if (!article) {
+					return ctx.notFound("Article not found");
+				}
+
+				return {
+					data: article,
+				};
+			} catch (error) {
+				ctx.throw(500, "Error fetching article by ID", { error });
+			}
+		},
 	})
 );

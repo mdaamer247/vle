@@ -1179,7 +1179,7 @@ export interface SharedSocialMediaLink extends Struct.ComponentSchema {
     name: 'Social Media Link';
   };
   attributes: {
-    icon: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images' | 'files'>;
     platform: Schema.Attribute.Enumeration<
       ['facebook', 'twitter', 'instagram', 'youtube', 'linkedin']
     > &

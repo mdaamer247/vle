@@ -453,6 +453,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   attributes: {
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
+    content: Schema.Attribute.Blocks;
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -463,6 +464,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       }>;
     featuredInResourcePage: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
+    issuedAt: Schema.Attribute.Date;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -473,6 +475,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     recentInResourcePage: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     slug: Schema.Attribute.UID<'title'>;
+    socialMedia: Schema.Attribute.Component<'shared.social-media-link', true>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -505,6 +508,34 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBlogCategoryBlogCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'blog_categories';
+  info: {
+    displayName: 'Blog Category';
+    pluralName: 'blog-categories';
+    singularName: 'blog-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-category.blog-category'
+    > &
+      Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1443,6 +1474,7 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
+      'api::blog-category.blog-category': ApiBlogCategoryBlogCategory;
       'api::category.category': ApiCategoryCategory;
       'api::digital-security.digital-security': ApiDigitalSecurityDigitalSecurity;
       'api::faq-category.faq-category': ApiFaqCategoryFaqCategory;

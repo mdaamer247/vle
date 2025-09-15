@@ -19,6 +19,9 @@
       "type": "text",
       "maxLength": 80
     },
+    "content": {
+      "type": "blocks"
+    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -52,6 +55,14 @@
     "recentInResourcePage": {
       "type": "boolean",
       "default": false
+    },
+    "issuedAt": {
+      "type": "date"
+    },
+    "socialMedia": {
+      "type": "component",
+      "component": "shared.social-media-link",
+      "repeatable": true
     }
   }
 }

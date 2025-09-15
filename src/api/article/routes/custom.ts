@@ -31,5 +31,14 @@ export default {
 				middlewares: [],
 			},
 		},
+		{
+			method: "GET",
+			path: "/articles/by/id/:articleId",
+			handler: "article.findById",
+			config: {
+				policies: [],
+				middlewares: [],
+			},
+		},
 	],
 };
