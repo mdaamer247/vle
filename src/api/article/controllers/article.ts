@@ -7,10 +7,68 @@ import { factories } from '@strapi/strapi';
 export default factories.createCoreController(
 	"api::article.article",
 	({ strapi }) => ({
+		async find(ctx) {
+			try {
+				// Extract pagination parameters
+				const page = parseInt((ctx.query.pagination as any)?.page) || 1;
+				const pageSize =
+					parseInt((ctx.query.pagination as any)?.pageSize) || 25;
+				const start = (page - 1) * pageSize;
+
+				// Get total count for pagination metadata
+				const total = await strapi.entityService.count("api::article.article");
+
+				// Fetch articles with pagination
+				const articles = await strapi.entityService.findMany(
+					"api::article.article",
+					{
+						fields: ["id", "title"],
+						populate: {
+							cover: {
+								fields: ["id", "alternativeText", "url"],
+							},
+						},
+						start,
+						limit: pageSize,
+					}
+				);
+
+				return {
+					data: articles,
+					meta: {
+						pagination: {
+							page,
+							pageSize,
+							pageCount: Math.ceil(total / pageSize),
+							total,
+						},
+					},
+				};
+			} catch (error) {
+				ctx.throw(500, "Error fetching articles", { error });
+			}
+		},
+
 		async findByCategory(ctx) {
 			const { categoryId } = ctx.params;
 
 			try {
+				// Extract pagination parameters
+				const page = parseInt((ctx.query.pagination as any)?.page) || 1;
+				const pageSize =
+					parseInt((ctx.query.pagination as any)?.pageSize) || 25;
+				const start = (page - 1) * pageSize;
+
+				// Get total count for pagination metadata
+				const total = await strapi.entityService.count("api::article.article", {
+					filters: {
+						category: {
+							id: categoryId,
+						},
+					},
+				});
+
+				// Fetch articles with pagination
 				const articles = await strapi.entityService.findMany(
 					"api::article.article",
 					{
@@ -24,6 +82,8 @@ export default factories.createCoreController(
 								fields: ["id", "alternativeText", "url"],
 							},
 						},
+						start,
+						limit: pageSize,
 					}
 				);
 
@@ -31,10 +91,10 @@ export default factories.createCoreController(
 					data: articles,
 					meta: {
 						pagination: {
-							page: 1,
-							pageSize: 25,
-							pageCount: Math.ceil(articles.length / 25),
-							total: articles.length,
+							page,
+							pageSize,
+							pageCount: Math.ceil(total / pageSize),
+							total,
 						},
 					},
 				};
@@ -45,6 +105,20 @@ export default factories.createCoreController(
 
 		async findFeatured(ctx) {
 			try {
+				// Extract pagination parameters
+				const page = parseInt((ctx.query.pagination as any)?.page) || 1;
+				const pageSize =
+					parseInt((ctx.query.pagination as any)?.pageSize) || 25;
+				const start = (page - 1) * pageSize;
+
+				// Get total count for pagination metadata
+				const total = await strapi.entityService.count("api::article.article", {
+					filters: {
+						featuredInResourcePage: true,
+					},
+				});
+
+				// Fetch articles with pagination
 				const articles = await strapi.entityService.findMany(
 					"api::article.article",
 					{
@@ -56,6 +130,8 @@ export default factories.createCoreController(
 								fields: ["id", "alternativeText", "url"],
 							},
 						},
+						start,
+						limit: pageSize,
 					}
 				);
 
@@ -63,10 +139,10 @@ export default factories.createCoreController(
 					data: articles,
 					meta: {
 						pagination: {
-							page: 1,
-							pageSize: 25,
-							pageCount: Math.ceil(articles.length / 25),
-							total: articles.length,
+							page,
+							pageSize,
+							pageCount: Math.ceil(total / pageSize),
+							total,
 						},
 					},
 				};
@@ -77,6 +153,20 @@ export default factories.createCoreController(
 
 		async findRecent(ctx) {
 			try {
+				// Extract pagination parameters
+				const page = parseInt((ctx.query.pagination as any)?.page) || 1;
+				const pageSize =
+					parseInt((ctx.query.pagination as any)?.pageSize) || 25;
+				const start = (page - 1) * pageSize;
+
+				// Get total count for pagination metadata
+				const total = await strapi.entityService.count("api::article.article", {
+					filters: {
+						recentInResourcePage: true,
+					},
+				});
+
+				// Fetch articles with pagination
 				const articles = await strapi.entityService.findMany(
 					"api::article.article",
 					{
@@ -88,6 +178,8 @@ export default factories.createCoreController(
 								fields: ["id", "alternativeText", "url"],
 							},
 						},
+						start,
+						limit: pageSize,
 					}
 				);
 
@@ -95,10 +187,10 @@ export default factories.createCoreController(
 					data: articles,
 					meta: {
 						pagination: {
-							page: 1,
-							pageSize: 25,
-							pageCount: Math.ceil(articles.length / 25),
-							total: articles.length,
+							page,
+							pageSize,
+							pageCount: Math.ceil(total / pageSize),
+							total,
 						},
 					},
 				};
