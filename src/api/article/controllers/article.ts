@@ -22,7 +22,7 @@ export default factories.createCoreController(
 				const articles = await strapi.entityService.findMany(
 					"api::article.article",
 					{
-						fields: ["id", "title"],
+						fields: ["id", "title", "description"],
 						populate: {
 							cover: {
 								fields: ["id", "alternativeText", "url"],
