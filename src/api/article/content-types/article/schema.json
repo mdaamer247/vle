@@ -12,57 +12,56 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text",
-      "maxLength": 80
-    },
-    "content": {
-      "type": "blocks"
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
-    },
-    "cover": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
-    },
-    "author": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::author.author",
-      "inversedBy": "articles"
-    },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "articles"
-    },
-    "featuredInResourcePage": {
-      "type": "boolean",
-      "default": false
-    },
-    "recentInResourcePage": {
-      "type": "boolean",
-      "default": false
-    },
-    "issuedAt": {
-      "type": "date"
-    },
-    "socialMedia": {
-      "type": "component",
-      "component": "shared.social-media-link",
-      "repeatable": true
-    }
-  }
+		"title": {
+			"type": "string"
+		},
+		"description": {
+			"type": "text",
+			"maxLength": 80
+		},
+		"content": {
+			"type": "blocks"
+		},
+		"slug": {
+			"type": "uid",
+			"targetField": "title"
+		},
+		"cover": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["images", "files", "videos"]
+		},
+		"author": {
+			"type": "relation",
+			"relation": "manyToOne",
+			"target": "api::author.author",
+			"inversedBy": "articles"
+		},
+		"category": {
+			"type": "relation",
+			"relation": "manyToOne",
+			"target": "api::category.category",
+			"inversedBy": "articles"
+		},
+		"featuredInResourcePage": {
+			"type": "boolean",
+			"default": false
+		},
+		"recentInResourcePage": {
+			"type": "boolean",
+			"default": false
+		},
+		"issuedAt": {
+			"type": "date"
+		},
+		"metaTitle": {
+			"type": "string",
+			"required": false
+		},
+		"metaDescription": {
+			"type": "text",
+			"required": false
+		}
+	}
 }

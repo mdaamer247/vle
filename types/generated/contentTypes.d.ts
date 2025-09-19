@@ -471,11 +471,12 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       'api::article.article'
     > &
       Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     recentInResourcePage: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     slug: Schema.Attribute.UID<'title'>;
-    socialMedia: Schema.Attribute.Component<'shared.social-media-link', true>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
