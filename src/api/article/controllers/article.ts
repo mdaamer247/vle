@@ -222,14 +222,6 @@ export default factories.createCoreController(
 							category: {
 								fields: ["id", "name", "slug"],
 							},
-							socialMedia: {
-								fields: ["platform", "url"],
-								populate: {
-									icon: {
-										fields: ["id", "alternativeText", "url"],
-									},
-								},
-							},
 						},
 					}
 				);
