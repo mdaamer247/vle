@@ -30,6 +30,7 @@ export default factories.createCoreController(
 						},
 						start,
 						limit: pageSize,
+						sort: { id: "desc" },
 					}
 				);
 
@@ -62,7 +63,7 @@ export default factories.createCoreController(
 				// Get total count for pagination metadata
 				const total = await strapi.entityService.count("api::article.article", {
 					filters: {
-						category: {
+						categories: {
 							id: categoryId,
 						},
 					},
@@ -73,7 +74,7 @@ export default factories.createCoreController(
 					"api::article.article",
 					{
 						filters: {
-							category: {
+							categories: {
 								id: categoryId,
 							},
 						},
@@ -84,6 +85,7 @@ export default factories.createCoreController(
 						},
 						start,
 						limit: pageSize,
+						sort: { id: "desc" },
 					}
 				);
 
@@ -132,6 +134,7 @@ export default factories.createCoreController(
 						},
 						start,
 						limit: pageSize,
+						sort: { id: "desc" },
 					}
 				);
 
@@ -180,6 +183,7 @@ export default factories.createCoreController(
 						},
 						start,
 						limit: pageSize,
+						sort: { id: "desc" },
 					}
 				);
 
@@ -219,7 +223,7 @@ export default factories.createCoreController(
 									},
 								},
 							},
-							category: {
+							categories: {
 								fields: ["id", "name", "slug"],
 							},
 						},
