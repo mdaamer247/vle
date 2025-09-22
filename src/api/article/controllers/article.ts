@@ -27,6 +27,17 @@ export default factories.createCoreController(
 							cover: {
 								fields: ["id", "alternativeText", "url"],
 							},
+							categories: {
+								fields: ["id", "name", "slug"],
+							},
+							author: {
+								fields: ["id", "name", "email"],
+								populate: {
+									avatar: {
+										fields: ["id", "alternativeText", "url"],
+									},
+								},
+							},
 						},
 						start,
 						limit: pageSize,
@@ -78,9 +89,21 @@ export default factories.createCoreController(
 								id: categoryId,
 							},
 						},
+						fields: ["id", "title", "description"],
 						populate: {
 							cover: {
 								fields: ["id", "alternativeText", "url"],
+							},
+							categories: {
+								fields: ["id", "name", "slug"],
+							},
+							author: {
+								fields: ["id", "name", "email"],
+								populate: {
+									avatar: {
+										fields: ["id", "alternativeText", "url"],
+									},
+								},
 							},
 						},
 						start,
@@ -127,9 +150,21 @@ export default factories.createCoreController(
 						filters: {
 							featuredInResourcePage: true,
 						},
+						fields: ["id", "title", "description"],
 						populate: {
 							cover: {
 								fields: ["id", "alternativeText", "url"],
+							},
+							categories: {
+								fields: ["id", "name", "slug"],
+							},
+							author: {
+								fields: ["id", "name", "email"],
+								populate: {
+									avatar: {
+										fields: ["id", "alternativeText", "url"],
+									},
+								},
 							},
 						},
 						start,
@@ -176,9 +211,21 @@ export default factories.createCoreController(
 						filters: {
 							recentInResourcePage: true,
 						},
+						fields: ["id", "title", "description"],
 						populate: {
 							cover: {
 								fields: ["id", "alternativeText", "url"],
+							},
+							categories: {
+								fields: ["id", "name", "slug"],
+							},
+							author: {
+								fields: ["id", "name", "email"],
+								populate: {
+									avatar: {
+										fields: ["id", "alternativeText", "url"],
+									},
+								},
 							},
 						},
 						start,
