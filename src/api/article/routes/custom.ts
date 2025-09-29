@@ -40,5 +40,14 @@ export default {
 				middlewares: [],
 			},
 		},
+		{
+			method: "GET",
+			path: "/articles/by/slug/:slug",
+			handler: "article.findBySlug",
+			config: {
+				policies: [],
+				middlewares: [],
+			},
+		},
 	],
 };

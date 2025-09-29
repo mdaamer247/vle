@@ -22,7 +22,7 @@ export default factories.createCoreController(
 				const articles = await strapi.entityService.findMany(
 					"api::article.article",
 					{
-						fields: ["id", "title", "description"],
+						fields: ["id", "title", "description", "slug"],
 						populate: {
 							cover: {
 								fields: ["id", "alternativeText", "url"],
@@ -89,7 +89,7 @@ export default factories.createCoreController(
 								id: categoryId,
 							},
 						},
-						fields: ["id", "title", "description"],
+						fields: ["id", "title", "description", "slug"],
 						populate: {
 							cover: {
 								fields: ["id", "alternativeText", "url"],
@@ -150,7 +150,7 @@ export default factories.createCoreController(
 						filters: {
 							featuredInResourcePage: true,
 						},
-						fields: ["id", "title", "description"],
+						fields: ["id", "title", "description", "slug"],
 						populate: {
 							cover: {
 								fields: ["id", "alternativeText", "url"],
@@ -211,7 +211,7 @@ export default factories.createCoreController(
 						filters: {
 							recentInResourcePage: true,
 						},
-						fields: ["id", "title", "description"],
+						fields: ["id", "title", "description", "slug"],
 						populate: {
 							cover: {
 								fields: ["id", "alternativeText", "url"],
@@ -286,6 +286,47 @@ export default factories.createCoreController(
 				};
 			} catch (error) {
 				ctx.throw(500, "Error fetching article by ID", { error });
+			}
+		},
+
+		async findBySlug(ctx) {
+			const { slug } = ctx.params;
+
+			try {
+				const articles = await strapi.entityService.findMany(
+					"api::article.article",
+					{
+						filters: {
+							slug: slug,
+						},
+						populate: {
+							cover: {
+								fields: ["id", "alternativeText", "url", "width", "height"],
+							},
+							author: {
+								fields: ["id", "name", "email"],
+								populate: {
+									avatar: {
+										fields: ["id", "alternativeText", "url"],
+									},
+								},
+							},
+							categories: {
+								fields: ["id", "name", "slug"],
+							},
+						},
+					}
+				);
+
+				if (!articles || articles.length === 0) {
+					return ctx.notFound("Article not found");
+				}
+
+				return {
+					data: articles[0],
+				};
+			} catch (error) {
+				ctx.throw(500, "Error fetching article by slug", { error });
 			}
 		},
 	})
