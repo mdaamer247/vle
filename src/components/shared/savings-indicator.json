@@ -34,15 +34,7 @@
       "default": "party-popper"
     },
     "textColor": {
-      "type": "enumeration",
-      "enum": [
-        "orange",
-        "green",
-        "blue",
-        "red"
-      ],
-      "required": false,
-      "default": "orange"
-    }
+			"type": "string"
+		}
   }
 }

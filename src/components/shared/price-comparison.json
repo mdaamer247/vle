@@ -25,24 +25,10 @@
       "required": true
     },
     "competitorColor": {
-      "type": "enumeration",
-      "enum": [
-        "dark-grey",
-        "black",
-        "grey"
-      ],
-      "required": false,
-      "default": "dark-grey"
-    },
+			"type": "string"
+		},
     "vleColor": {
-      "type": "enumeration",
-      "enum": [
-        "orange",
-        "blue",
-        "green"
-      ],
-      "required": false,
-      "default": "orange"
-    }
+			"type": "string"
+		}
   }
 }

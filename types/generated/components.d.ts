@@ -99,16 +99,10 @@ export interface SharedBroadbandFacts extends Struct.ComponentSchema {
     name: 'Broadband Facts';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.Enumeration<
-      ['black', 'dark-grey', 'blue', 'green']
-    > &
-      Schema.Attribute.DefaultTo<'black'>;
+    backgroundColor: Schema.Attribute.String;
     linkText: Schema.Attribute.String & Schema.Attribute.Required;
     linkUrl: Schema.Attribute.String;
-    textColor: Schema.Attribute.Enumeration<
-      ['white', 'light-grey', 'blue', 'green']
-    > &
-      Schema.Attribute.DefaultTo<'white'>;
+    textColor: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -272,17 +266,11 @@ export interface SharedCountryButton extends Struct.ComponentSchema {
     name: 'Country Button';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.Enumeration<
-      ['off-white', 'light-grey', 'white', 'beige']
-    > &
-      Schema.Attribute.DefaultTo<'off-white'>;
+    backgroundColor: Schema.Attribute.String;
     countryCode: Schema.Attribute.String;
     countryName: Schema.Attribute.String & Schema.Attribute.Required;
     isAvailable: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    textColor: Schema.Attribute.Enumeration<
-      ['black', 'dark-grey', 'blue', 'green']
-    > &
-      Schema.Attribute.DefaultTo<'black'>;
+    textColor: Schema.Attribute.String;
   };
 }
 
@@ -295,10 +283,7 @@ export interface SharedDigitalSecuritySection extends Struct.ComponentSchema {
     name: 'Digital Security Section';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.Enumeration<
-      ['dark', 'black', 'blue', 'green']
-    > &
-      Schema.Attribute.DefaultTo<'dark'>;
+    backgroundColor: Schema.Attribute.String;
     backgroundImage: Schema.Attribute.Media<'images'>;
     ctaButton: Schema.Attribute.Component<'shared.button', false> &
       Schema.Attribute.Required;
@@ -322,23 +307,14 @@ export interface SharedEmailSubscriptionForm extends Struct.ComponentSchema {
   };
   attributes: {
     actionUrl: Schema.Attribute.String;
-    buttonBackgroundColor: Schema.Attribute.Enumeration<
-      ['black', 'dark-grey', 'blue', 'orange']
-    > &
-      Schema.Attribute.DefaultTo<'black'>;
+    buttonBackgroundColor: Schema.Attribute.String;
     buttonText: Schema.Attribute.String & Schema.Attribute.Required;
-    buttonTextColor: Schema.Attribute.Enumeration<
-      ['white', 'black', 'blue', 'orange']
-    > &
-      Schema.Attribute.DefaultTo<'white'>;
+    buttonTextColor: Schema.Attribute.String;
     formStyle: Schema.Attribute.Enumeration<
       ['integrated', 'separate', 'stacked']
     > &
       Schema.Attribute.DefaultTo<'integrated'>;
-    inputBackgroundColor: Schema.Attribute.Enumeration<
-      ['white', 'light-grey', 'off-white']
-    > &
-      Schema.Attribute.DefaultTo<'white'>;
+    inputBackgroundColor: Schema.Attribute.String;
     placeholder: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -461,10 +437,7 @@ export interface SharedGlobalConnectivitySection
     name: 'Global Connectivity Section';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.Enumeration<
-      ['white', 'light-grey', 'off-white']
-    > &
-      Schema.Attribute.DefaultTo<'white'>;
+    backgroundColor: Schema.Attribute.String;
     countryButtons: Schema.Attribute.Component<'shared.country-button', true> &
       Schema.Attribute.Required;
     ctaButton: Schema.Attribute.Component<'shared.button', false> &
@@ -542,8 +515,7 @@ export interface SharedLineSelector extends Struct.ComponentSchema {
     name: 'Line Selector';
   };
   attributes: {
-    activeColor: Schema.Attribute.Enumeration<['orange', 'blue', 'green']> &
-      Schema.Attribute.DefaultTo<'orange'>;
+    activeColor: Schema.Attribute.String;
     defaultLines: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<
         {
@@ -552,8 +524,7 @@ export interface SharedLineSelector extends Struct.ComponentSchema {
         number
       > &
       Schema.Attribute.DefaultTo<2>;
-    handleColor: Schema.Attribute.Enumeration<['orange', 'blue', 'green']> &
-      Schema.Attribute.DefaultTo<'orange'>;
+    handleColor: Schema.Attribute.String;
     maxLines: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<
         {
@@ -570,10 +541,7 @@ export interface SharedLineSelector extends Struct.ComponentSchema {
         number
       > &
       Schema.Attribute.DefaultTo<1>;
-    trackColor: Schema.Attribute.Enumeration<
-      ['grey', 'light-grey', 'dark-grey']
-    > &
-      Schema.Attribute.DefaultTo<'grey'>;
+    trackColor: Schema.Attribute.String;
   };
 }
 
@@ -675,10 +643,7 @@ export interface SharedNewsletterSection extends Struct.ComponentSchema {
     name: 'Newsletter Section';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.Enumeration<
-      ['brown', 'terracotta', 'burnt-sienna', 'dark-brown']
-    > &
-      Schema.Attribute.DefaultTo<'brown'>;
+    backgroundColor: Schema.Attribute.String;
     emailForm: Schema.Attribute.Component<
       'shared.email-subscription-form',
       false
@@ -687,15 +652,9 @@ export interface SharedNewsletterSection extends Struct.ComponentSchema {
     hasDecorativeElements: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<true>;
     subtitle: Schema.Attribute.String & Schema.Attribute.Required;
-    subtitleColor: Schema.Attribute.Enumeration<
-      ['light-gray', 'off-white', 'beige', 'white']
-    > &
-      Schema.Attribute.DefaultTo<'light-gray'>;
+    subtitleColor: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    titleColor: Schema.Attribute.Enumeration<
-      ['off-white', 'light-cream', 'white', 'beige']
-    > &
-      Schema.Attribute.DefaultTo<'off-white'>;
+    titleColor: Schema.Attribute.String;
   };
 }
 
@@ -738,14 +697,10 @@ export interface SharedPriceComparison extends Struct.ComponentSchema {
     name: 'Price Comparison';
   };
   attributes: {
-    competitorColor: Schema.Attribute.Enumeration<
-      ['dark-grey', 'black', 'grey']
-    > &
-      Schema.Attribute.DefaultTo<'dark-grey'>;
+    competitorColor: Schema.Attribute.String;
     competitorLabel: Schema.Attribute.String & Schema.Attribute.Required;
     competitorPrice: Schema.Attribute.String & Schema.Attribute.Required;
-    vleColor: Schema.Attribute.Enumeration<['orange', 'blue', 'green']> &
-      Schema.Attribute.DefaultTo<'orange'>;
+    vleColor: Schema.Attribute.String;
     vleLabel: Schema.Attribute.String & Schema.Attribute.Required;
     vlePrice: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -760,18 +715,12 @@ export interface SharedPricingPlan extends Struct.ComponentSchema {
     name: 'Pricing Plan';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.Enumeration<
-      ['white', 'orange', 'blue', 'green']
-    > &
-      Schema.Attribute.DefaultTo<'white'>;
+    backgroundColor: Schema.Attribute.String;
     ctaButton: Schema.Attribute.Component<'shared.button', false> &
       Schema.Attribute.Required;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     isHighlighted: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    textColor: Schema.Attribute.Enumeration<
-      ['dark', 'white', 'orange', 'blue']
-    > &
-      Schema.Attribute.DefaultTo<'dark'>;
+    textColor: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -807,10 +756,7 @@ export interface SharedPromotionalBadge extends Struct.ComponentSchema {
     name: 'Promotional Badge';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.Enumeration<
-      ['blue', 'orange', 'green', 'red', 'purple']
-    > &
-      Schema.Attribute.DefaultTo<'blue'>;
+    backgroundColor: Schema.Attribute.String;
     position: Schema.Attribute.Enumeration<
       ['top-right', 'top-left', 'bottom-right', 'bottom-left', 'center']
     > &
@@ -820,10 +766,7 @@ export interface SharedPromotionalBadge extends Struct.ComponentSchema {
     > &
       Schema.Attribute.DefaultTo<'blob'>;
     text: Schema.Attribute.String & Schema.Attribute.Required;
-    textColor: Schema.Attribute.Enumeration<
-      ['white', 'black', 'blue', 'orange']
-    > &
-      Schema.Attribute.DefaultTo<'white'>;
+    textColor: Schema.Attribute.String;
   };
 }
 
@@ -834,10 +777,7 @@ export interface SharedQuickLinkItem extends Struct.ComponentSchema {
     displayName: 'Quick Link Item';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.Enumeration<
-      ['grey', 'purple', 'green', 'yellow', 'light-grey']
-    > &
-      Schema.Attribute.DefaultTo<'grey'>;
+    backgroundColor: Schema.Attribute.String;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     link: Schema.Attribute.String;
@@ -966,10 +906,7 @@ export interface SharedSavingsIndicator extends Struct.ComponentSchema {
     savingsAmount: Schema.Attribute.String & Schema.Attribute.Required;
     savingsPeriod: Schema.Attribute.Enumeration<['year', 'month', 'lifetime']> &
       Schema.Attribute.DefaultTo<'year'>;
-    textColor: Schema.Attribute.Enumeration<
-      ['orange', 'green', 'blue', 'red']
-    > &
-      Schema.Attribute.DefaultTo<'orange'>;
+    textColor: Schema.Attribute.String;
   };
 }
 
@@ -1288,15 +1225,9 @@ export interface SharedTestimonialsSection extends Struct.ComponentSchema {
     name: 'Testimonials Section';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.Enumeration<
-      ['white', 'light-grey', 'beige', 'off-white']
-    > &
-      Schema.Attribute.DefaultTo<'white'>;
+    backgroundColor: Schema.Attribute.String;
     showNavigation: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    testimonialBackgroundColor: Schema.Attribute.Enumeration<
-      ['beige', 'light-grey', 'off-white', 'white']
-    > &
-      Schema.Attribute.DefaultTo<'beige'>;
+    testimonialBackgroundColor: Schema.Attribute.String;
     testimonials: Schema.Attribute.Component<'shared.testimonial-item', true> &
       Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;

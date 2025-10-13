@@ -18,14 +18,14 @@
     },
     "ctaButton": {
       "type": "component",
-      "repeatable": false,
       "component": "shared.button",
+      "repeatable": false,
       "required": true
     },
     "featureCards": {
       "type": "component",
-      "repeatable": true,
       "component": "shared.security-feature-card",
+      "repeatable": true,
       "required": true
     },
     "backgroundImage": {
@@ -37,15 +37,7 @@
       ]
     },
     "backgroundColor": {
-      "type": "enumeration",
-      "enum": [
-        "dark",
-        "black",
-        "blue",
-        "green"
-      ],
-      "required": false,
-      "default": "dark"
+      "type": "string"
     }
   }
 }

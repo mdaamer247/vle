@@ -27,34 +27,13 @@
       "min": 1
     },
     "trackColor": {
-      "type": "enumeration",
-      "enum": [
-        "grey",
-        "light-grey",
-        "dark-grey"
-      ],
-      "required": false,
-      "default": "grey"
-    },
+			"type": "string"
+		},
     "activeColor": {
-      "type": "enumeration",
-      "enum": [
-        "orange",
-        "blue",
-        "green"
-      ],
-      "required": false,
-      "default": "orange"
-    },
+			"type": "string"
+		},
     "handleColor": {
-      "type": "enumeration",
-      "enum": [
-        "orange",
-        "blue",
-        "green"
-      ],
-      "required": false,
-      "default": "orange"
-    }
+			"type": "string"
+		}
   }
 }
