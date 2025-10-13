@@ -33,6 +33,13 @@
     },
     "backgroundColor": {
       "type": "string"
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "_self",
+        "_blank"
+      ]
     }
   }
 }
