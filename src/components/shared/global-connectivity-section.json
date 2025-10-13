@@ -8,42 +8,35 @@
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "description": {
-      "type": "text",
-      "required": true
-    },
-    "ctaButton": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.button",
-      "required": true
-    },
-    "countryButtons": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.country-button",
-      "required": true
-    },
-    "backgroundColor": {
-      "type": "enumeration",
-      "enum": [
-        "white",
-        "light-grey",
-        "off-white"
-      ],
-      "required": false,
-      "default": "white"
-    },
-    "gridColumns": {
-      "type": "integer",
-      "required": false,
-      "default": 4,
-      "min": 2,
-      "max": 6
-    }
-  }
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": true
+		},
+		"ctaButton": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.button",
+			"required": true
+		},
+		"countryButtons": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.country-button",
+			"required": true
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"gridColumns": {
+			"type": "integer",
+			"required": false,
+			"default": 4,
+			"min": 2,
+			"max": 6
+		}
+	}
 }

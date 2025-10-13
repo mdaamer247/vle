@@ -24,26 +24,10 @@
       "default": true
     },
     "backgroundColor": {
-      "type": "enumeration",
-      "enum": [
-        "white",
-        "light-grey",
-        "beige",
-        "off-white"
-      ],
-      "required": false,
-      "default": "white"
-    },
+			"type": "string"
+		},
     "testimonialBackgroundColor": {
-      "type": "enumeration",
-      "enum": [
-        "beige",
-        "light-grey",
-        "off-white",
-        "white"
-      ],
-      "required": false,
-      "default": "beige"
-    }
+			"type": "string"
+		}
   }
 }

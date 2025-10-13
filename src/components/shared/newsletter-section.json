@@ -23,22 +23,13 @@
 			"required": true
 		},
 		"backgroundColor": {
-			"type": "enumeration",
-			"enum": ["brown", "terracotta", "burnt-sienna", "dark-brown"],
-			"required": false,
-			"default": "brown"
+			"type": "string"
 		},
 		"titleColor": {
-			"type": "enumeration",
-			"enum": ["off-white", "light-cream", "white", "beige"],
-			"required": false,
-			"default": "off-white"
+			"type": "string"
 		},
 		"subtitleColor": {
-			"type": "enumeration",
-			"enum": ["light-gray", "off-white", "beige", "white"],
-			"required": false,
-			"default": "light-gray"
+			"type": "string"
 		},
 		"hasDecorativeElements": {
 			"type": "boolean",

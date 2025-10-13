@@ -1,43 +1,37 @@
 {
-	"collectionName": "components_shared_pricing_plans",
-	"info": {
-		"name": "Pricing Plan",
-		"icon": "creditCard",
-		"displayName": "Pricing Plan",
-		"description": "Individual pricing plan card"
-	},
-	"options": {},
-	"attributes": {
-		"title": {
-			"type": "string",
-			"required": true
-		},
-		"description": {
-			"type": "text",
-			"required": true
-		},
-		"ctaButton": {
-			"type": "component",
-			"repeatable": false,
-			"component": "shared.button",
-			"required": true
-		},
-		"isHighlighted": {
-			"type": "boolean",
-			"required": false,
-			"default": false
-		},
-		"backgroundColor": {
-			"type": "enumeration",
-			"enum": ["white", "orange", "blue", "green"],
-			"required": false,
-			"default": "white"
-		},
-		"textColor": {
-			"type": "enumeration",
-			"enum": ["dark", "white", "orange", "blue"],
-			"required": false,
-			"default": "dark"
-		}
-	}
+  "collectionName": "components_shared_pricing_plans",
+  "info": {
+    "name": "Pricing Plan",
+    "icon": "creditCard",
+    "displayName": "Pricing Plan",
+    "description": "Individual pricing plan card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "ctaButton": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false,
+      "required": true
+    },
+    "isHighlighted": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
+    }
+  }
 }

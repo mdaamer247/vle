@@ -17,27 +17,11 @@
       "required": false
     },
     "backgroundColor": {
-      "type": "enumeration",
-      "required": false,
-      "default": "off-white",
-      "enum": [
-        "off-white",
-        "light-grey",
-        "white",
-        "beige"
-      ]
-    },
+			"type": "string"
+		},
     "textColor": {
-      "type": "enumeration",
-      "required": false,
-      "default": "black",
-      "enum": [
-        "black",
-        "dark-grey",
-        "blue",
-        "green"
-      ]
-    },
+			"type": "string"
+		},
     "isAvailable": {
       "type": "boolean",
       "required": false,

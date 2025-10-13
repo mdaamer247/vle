@@ -21,26 +21,10 @@
       "required": false
     },
     "backgroundColor": {
-      "type": "enumeration",
-      "enum": [
-        "black",
-        "dark-grey",
-        "blue",
-        "green"
-      ],
-      "required": false,
-      "default": "black"
+      "type": "string"
     },
     "textColor": {
-      "type": "enumeration",
-      "enum": [
-        "white",
-        "light-grey",
-        "blue",
-        "green"
-      ],
-      "required": false,
-      "default": "white"
+      "type": "string"
     }
   }
 }

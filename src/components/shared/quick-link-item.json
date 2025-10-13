@@ -1,39 +1,45 @@
 {
-	"collectionName": "components_shared_quick_link_items",
-	"info": {
-		"displayName": "Quick Link Item",
-		"description": "Individual quick link card with image, title, and description"
-	},
-	"options": {},
-	"attributes": {
-		"title": {
-			"type": "string",
-			"required": true
-		},
-		"description": {
-			"type": "text",
-			"required": true
-		},
-		"image": {
-			"type": "media",
-			"multiple": false,
-			"required": true,
-			"allowedTypes": ["images"]
-		},
-		"link": {
-			"type": "string",
-			"required": false
-		},
-		"backgroundColor": {
-			"type": "enumeration",
-			"enum": ["grey", "purple", "green", "yellow", "light-grey"],
-			"required": false,
-			"default": "grey"
-		},
-		"order": {
-			"type": "integer",
-			"required": false,
-			"default": 0
-		}
-	}
+  "collectionName": "components_shared_quick_link_items",
+  "info": {
+    "displayName": "Quick Link Item",
+    "description": "Individual quick link card with image, title, and description"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    },
+    "order": {
+      "type": "integer",
+      "required": false,
+      "default": 0
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "_self",
+        "_blank"
+      ]
+    }
+  }
 }
