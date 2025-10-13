@@ -782,6 +782,7 @@ export interface SharedQuickLinkItem extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     link: Schema.Attribute.String;
     order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    target: Schema.Attribute.Enumeration<['_self', '_blank']>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
