@@ -25,9 +25,14 @@ export default factories.createCoreController(
 									},
 								},
 							},
+							heroHighlights: true,
 							featureImages: {
 								fields: ["id", "alternativeText", "url"],
 							},
+							supportLineIcon: {
+								fields: ["id", "alternativeText", "url"],
+							},
+							mobileButton: true,
 						},
 					},
 					serviceFeaturesSection: {
