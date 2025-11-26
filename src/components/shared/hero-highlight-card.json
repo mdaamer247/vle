@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_hero_highlight_cards",
+  "info": {
+    "name": "Hero Highlight Card",
+    "icon": "badge",
+    "displayName": "Hero Highlight Card",
+    "description": "Badge-style highlights that sit below the hero title"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
+

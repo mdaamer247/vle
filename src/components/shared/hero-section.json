@@ -8,49 +8,65 @@
   },
   "options": {},
   "attributes": {
-    "mainTitle": {
-      "type": "string",
-      "required": true
-    },
-    "highlightedTitle": {
-      "type": "string",
-      "required": false
-    },
-    "subtitle": {
-      "type": "string",
-      "required": false
-    },
-    "poweredBy": {
-      "type": "string",
-      "required": false
-    },
-    "poweredByLogo": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "ctaButton": {
-      "type": "component",
-      "component": "shared.button",
-      "repeatable": false,
-      "required": false
-    },
-    "featurePanels": {
-      "type": "component",
-      "component": "shared.feature-panel",
-      "repeatable": true,
-      "required": false
-    },
-    "featureImages": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    }
-  }
+		"mainTitle": {
+			"type": "string",
+			"required": true
+		},
+		"highlightedTitle": {
+			"type": "string",
+			"required": false
+		},
+		"subtitle": {
+			"type": "string",
+			"required": false
+		},
+		"poweredBy": {
+			"type": "string",
+			"required": false
+		},
+		"poweredByLogo": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["images"]
+		},
+		"ctaButton": {
+			"type": "component",
+			"component": "shared.button",
+			"repeatable": false,
+			"required": false
+		},
+		"featurePanels": {
+			"type": "component",
+			"component": "shared.feature-panel",
+			"repeatable": true,
+			"required": false
+		},
+		"heroHighlights": {
+			"type": "component",
+			"component": "shared.hero-highlight-card",
+			"repeatable": true,
+			"required": false
+		},
+		"featureImages": {
+			"type": "media",
+			"multiple": true,
+			"allowedTypes": ["images", "files"]
+		},
+		"supportLineText": {
+			"type": "string",
+			"required": false
+		},
+		"supportLineIcon": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["images"]
+		},
+		"mobileButton": {
+			"type": "component",
+			"component": "shared.button",
+			"repeatable": false
+		}
+	}
 }
