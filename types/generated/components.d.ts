@@ -456,6 +456,19 @@ export interface SharedGlobalConnectivitySection
   };
 }
 
+export interface SharedHeroHighlightCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_hero_highlight_cards';
+  info: {
+    description: 'Badge-style highlights that sit below the hero title';
+    displayName: 'Hero Highlight Card';
+    icon: 'badge';
+    name: 'Hero Highlight Card';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedHeroSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_hero_sections';
   info: {
@@ -468,11 +481,18 @@ export interface SharedHeroSection extends Struct.ComponentSchema {
     ctaButton: Schema.Attribute.Component<'shared.button', false>;
     featureImages: Schema.Attribute.Media<'images' | 'files', true>;
     featurePanels: Schema.Attribute.Component<'shared.feature-panel', true>;
+    heroHighlights: Schema.Attribute.Component<
+      'shared.hero-highlight-card',
+      true
+    >;
     highlightedTitle: Schema.Attribute.String;
     mainTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    mobileButton: Schema.Attribute.Component<'shared.button', false>;
     poweredBy: Schema.Attribute.String;
     poweredByLogo: Schema.Attribute.Media<'images'>;
     subtitle: Schema.Attribute.String;
+    supportLineIcon: Schema.Attribute.Media<'images'>;
+    supportLineText: Schema.Attribute.String;
   };
 }
 
@@ -1337,6 +1357,7 @@ declare module '@strapi/strapi' {
       'shared.footer-link-column': SharedFooterLinkColumn;
       'shared.footer-middle-section': SharedFooterMiddleSection;
       'shared.global-connectivity-section': SharedGlobalConnectivitySection;
+      'shared.hero-highlight-card': SharedHeroHighlightCard;
       'shared.hero-section': SharedHeroSection;
       'shared.insurance-info': SharedInsuranceInfo;
       'shared.language-selector': SharedLanguageSelector;
