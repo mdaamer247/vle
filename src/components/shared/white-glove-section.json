@@ -1,0 +1,29 @@
+{
+	"collectionName": "components_shared_white_glove_sections",
+	"info": {
+		"name": "White Glove Section",
+		"icon": "shield",
+		"displayName": "White Glove Section",
+		"description": "White glove resolution service section"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"subtitle": {
+			"type": "text",
+			"required": false
+		},
+		"description": {
+			"type": "text",
+			"required": false
+		},
+		"services": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.service-item"
+		}
+	}
+}

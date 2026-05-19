@@ -1,0 +1,20 @@
+{
+	"collectionName": "components_shared_copyright_infos",
+	"info": {
+		"name": "Copyright Info",
+		"icon": "copyright",
+		"displayName": "Copyright Info",
+		"description": "Copyright information and legal text"
+	},
+	"options": {},
+	"attributes": {
+		"text": {
+			"type": "text",
+			"required": true
+		},
+		"year": {
+			"type": "integer",
+			"required": false
+		}
+	}
+}

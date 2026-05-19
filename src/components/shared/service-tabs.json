@@ -1,0 +1,22 @@
+{
+	"collectionName": "components_shared_service_tabs",
+	"info": {
+		"name": "Service Tabs",
+		"icon": "layout",
+		"displayName": "Service Tabs",
+		"description": "Navigation tabs for different service categories"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"tabs": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.service-tab",
+			"required": true
+		}
+	}
+}

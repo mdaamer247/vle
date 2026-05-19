@@ -1,0 +1,29 @@
+{
+	"collectionName": "components_shared_compatibility_sections",
+	"info": {
+		"name": "Compatibility Section",
+		"icon": "mobile",
+		"displayName": "Compatibility Section",
+		"description": "Multi-device compatibility section"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"subtitle": {
+			"type": "text",
+			"required": false
+		},
+		"description": {
+			"type": "text",
+			"required": false
+		},
+		"platforms": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.platform-item"
+		}
+	}
+}

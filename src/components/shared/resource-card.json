@@ -1,0 +1,51 @@
+{
+	"collectionName": "components_shared_resource_cards",
+	"info": {
+		"displayName": "Resource Card",
+		"description": "Individual self help resource card with image, title, description, and read more button"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": true
+		},
+		"image": {
+			"type": "media",
+			"multiple": false,
+			"required": true,
+			"allowedTypes": ["images"]
+		},
+		"readMoreButton": {
+			"type": "component",
+			"component": "shared.button",
+			"repeatable": false,
+			"required": false
+		},
+		"resourceType": {
+			"type": "enumeration",
+			"enum": [
+				"getting-started",
+				"troubleshooting",
+				"video-tutorials",
+				"compatibility-checker",
+				"documentation",
+				"faq"
+			],
+			"required": false
+		},
+		"link": {
+			"type": "string",
+			"required": false
+		},
+		"order": {
+			"type": "integer",
+			"required": false,
+			"default": 0
+		}
+	}
+}

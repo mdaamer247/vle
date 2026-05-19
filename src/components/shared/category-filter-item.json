@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_category_filter_items",
+  "info": {
+    "displayName": "Category Filter Item",
+    "description": "Individual category filter button"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "isActive": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}

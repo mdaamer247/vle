@@ -1,0 +1,25 @@
+{
+	"collectionName": "components_shared_self_help_resources_sections",
+	"info": {
+		"displayName": "Self Help Resources Section",
+		"description": "Section with title, description, and grid of self help resource cards"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true,
+			"default": "Self Help Resources"
+		},
+		"description": {
+			"type": "text",
+			"required": false
+		},
+		"resourceCards": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.resource-card",
+			"required": false
+		}
+	}
+}

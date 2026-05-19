@@ -1,0 +1,26 @@
+{
+	"collectionName": "components_shared_media_logos_items",
+	"info": {
+		"name": "Media Logo",
+		"icon": "picture",
+		"displayName": "Media Logo",
+		"description": "Individual media outlet logo"
+	},
+	"options": {},
+	"attributes": {
+		"name": {
+			"type": "string",
+			"required": true
+		},
+		"logo": {
+			"type": "media",
+			"multiple": false,
+			"required": true,
+			"allowedTypes": ["images"]
+		},
+		"url": {
+			"type": "string",
+			"required": false
+		}
+	}
+}

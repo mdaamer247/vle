@@ -1,0 +1,39 @@
+{
+	"collectionName": "components_shared_email_subscription_forms",
+	"info": {
+		"name": "Email Subscription Form",
+		"icon": "envelope",
+		"displayName": "Email Subscription Form",
+		"description": "Email subscription form with input field and subscribe button"
+	},
+	"options": {},
+	"attributes": {
+		"placeholder": {
+			"type": "string",
+			"required": true
+		},
+		"buttonText": {
+			"type": "string",
+			"required": true
+		},
+		"actionUrl": {
+			"type": "string",
+			"required": false
+		},
+		"inputBackgroundColor": {
+			"type": "string"
+		},
+		"buttonBackgroundColor": {
+			"type": "string"
+		},
+		"buttonTextColor": {
+			"type": "string"
+		},
+		"formStyle": {
+			"type": "enumeration",
+			"enum": ["integrated", "separate", "stacked"],
+			"required": false,
+			"default": "integrated"
+		}
+	}
+}

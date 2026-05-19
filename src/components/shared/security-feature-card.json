@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_security_feature_cards",
+  "info": {
+    "name": "Security Feature Card",
+    "icon": "shield",
+    "displayName": "Security Feature Card",
+    "description": "Individual card highlighting a security feature"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

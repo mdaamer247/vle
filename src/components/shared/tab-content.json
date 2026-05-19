@@ -1,0 +1,30 @@
+{
+	"collectionName": "components_shared_tab_contents",
+	"info": {
+		"name": "Tab Content",
+		"icon": "layout",
+		"displayName": "Tab Content",
+		"description": "Content for each tab including image, left and right content"
+	},
+	"options": {},
+	"attributes": {
+		"centerImage": {
+			"type": "media",
+			"multiple": false,
+			"required": true,
+			"allowedTypes": ["images"]
+		},
+		"leftContent": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.benefits-section",
+			"required": true
+		},
+		"rightContent": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.benefit-item",
+			"required": true
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_broadband_facts",
+  "info": {
+    "name": "Broadband Facts",
+    "icon": "information",
+    "displayName": "Broadband Facts",
+    "description": "Broadband facts bar with link"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "linkText": {
+      "type": "string",
+      "required": true
+    },
+    "linkUrl": {
+      "type": "string",
+      "required": false
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
+    }
+  }
+}

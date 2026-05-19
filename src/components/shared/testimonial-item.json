@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_shared_testimonial_items",
+  "info": {
+    "name": "Testimonial Item",
+    "icon": "quote",
+    "displayName": "Testimonial Item",
+    "description": "Individual customer testimonial with quote, name, title, and photo"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "text",
+      "required": true
+    },
+    "customerName": {
+      "type": "string",
+      "required": true
+    },
+    "customerTitle": {
+      "type": "string",
+      "required": true
+    },
+    "customerPhoto": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "company": {
+      "type": "string",
+      "required": false
+    },
+    "isActive": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    }
+  }
+}

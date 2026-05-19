@@ -1,0 +1,31 @@
+{
+	"kind": "singleType",
+	"collectionName": "footers",
+	"info": {
+		"singularName": "footer",
+		"pluralName": "footers",
+		"displayName": "Footer",
+		"description": "Global footer for all pages"
+	},
+	"options": {
+		"draftAndPublish": false
+	},
+	"pluginOptions": {},
+	"attributes": {
+		"linkColumns": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.footer-link-column"
+		},
+		"middleSection": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.footer-middle-section"
+		},
+		"bottomSection": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.footer-bottom-section"
+		}
+	}
+}

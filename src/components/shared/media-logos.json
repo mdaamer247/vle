@@ -1,0 +1,22 @@
+{
+	"collectionName": "components_shared_media_logos",
+	"info": {
+		"name": "Media Logos",
+		"icon": "picture",
+		"displayName": "Media Logos",
+		"description": "Media outlet logos section"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"logos": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.media-logo",
+			"required": true
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"collectionName": "components_shared_service_tabs_items",
+	"info": {
+		"name": "Service Tab",
+		"icon": "bulletList",
+		"displayName": "Service Tab",
+		"description": "Individual service tab item with content"
+	},
+	"options": {},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"required": true
+		},
+		"isActive": {
+			"type": "boolean",
+			"required": false,
+			"default": false
+		},
+		"tabId": {
+			"type": "string",
+			"required": true
+		},
+		"content": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.tab-content",
+			"required": true
+		}
+	}
+}

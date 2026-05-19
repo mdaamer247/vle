@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_country_buttons",
+  "info": {
+    "name": "Country Button",
+    "icon": "flag",
+    "displayName": "Country Button",
+    "description": "Individual country/region button with flag and name"
+  },
+  "options": {},
+  "attributes": {
+    "countryName": {
+      "type": "string",
+      "required": true
+    },
+    "countryCode": {
+      "type": "string",
+      "required": false
+    },
+    "backgroundColor": {
+			"type": "string"
+		},
+    "textColor": {
+			"type": "string"
+		},
+    "isAvailable": {
+      "type": "boolean",
+      "required": false,
+      "default": true
+    }
+  }
+}

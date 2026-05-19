@@ -1,0 +1,22 @@
+{
+	"collectionName": "components_shared_footer_bottom_sections",
+	"info": {
+		"name": "Footer Bottom Section",
+		"icon": "layout",
+		"displayName": "Footer Bottom Section",
+		"description": "Bottom section with social media and copyright"
+	},
+	"options": {},
+	"attributes": {
+		"socialMediaLinks": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.social-media-link"
+		},
+		"copyrightInfo": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.copyright-info"
+		}
+	}
+}

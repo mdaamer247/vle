@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_testimonials_sections",
+  "info": {
+    "name": "Testimonials Section",
+    "icon": "quote",
+    "displayName": "Testimonials Section",
+    "description": "Customer testimonials section with carousel navigation"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.testimonial-item",
+      "required": true
+    },
+    "showNavigation": {
+      "type": "boolean",
+      "required": false,
+      "default": true
+    },
+    "backgroundColor": {
+			"type": "string"
+		},
+    "testimonialBackgroundColor": {
+			"type": "string"
+		}
+  }
+}

@@ -1,0 +1,18 @@
+{
+	"collectionName": "components_shared_category_filters",
+	"info": {
+		"displayName": "Category Filter",
+		"description": "Filter buttons for article categories"
+	},
+	"options": {
+		"timestamps": true
+	},
+	"attributes": {
+		"categories": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.category-filter-item",
+			"required": true
+		}
+	}
+}

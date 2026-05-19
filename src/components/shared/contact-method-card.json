@@ -1,0 +1,42 @@
+{
+	"collectionName": "components_shared_contact_method_cards",
+	"info": {
+		"displayName": "Contact Method Card",
+		"description": "Individual contact method card with icon, title, description, and contact detail"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": true
+		},
+		"contactDetail": {
+			"type": "string",
+			"required": true
+		},
+		"icon": {
+			"type": "media",
+			"multiple": false,
+			"required": true,
+			"allowedTypes": ["images"]
+		},
+		"methodType": {
+			"type": "enumeration",
+			"enum": ["live-chat", "phone", "email", "ticket", "office"],
+			"required": false
+		},
+		"link": {
+			"type": "string",
+			"required": false
+		},
+		"order": {
+			"type": "integer",
+			"required": false,
+			"default": 0
+		}
+	}
+}

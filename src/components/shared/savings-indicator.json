@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_shared_savings_indicators",
+  "info": {
+    "name": "Savings Indicator",
+    "icon": "gift",
+    "displayName": "Savings Indicator",
+    "description": "Savings amount indicator with icon"
+  },
+  "options": {},
+  "attributes": {
+    "savingsAmount": {
+      "type": "string",
+      "required": true
+    },
+    "savingsPeriod": {
+      "type": "enumeration",
+      "enum": [
+        "year",
+        "month",
+        "lifetime"
+      ],
+      "required": false,
+      "default": "year"
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "party-popper",
+        "gift",
+        "money",
+        "star"
+      ],
+      "required": false,
+      "default": "party-popper"
+    },
+    "textColor": {
+			"type": "string"
+		}
+  }
+}

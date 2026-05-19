@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_shared_savings_sections",
+  "info": {
+    "name": "Savings Section",
+    "icon": "dollar",
+    "displayName": "Savings Section",
+    "description": "Main savings section with price comparison, line selector, and CTA"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "priceComparison": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.price-comparison",
+      "required": true
+    },
+    "lineSelector": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.line-selector",
+      "required": true
+    },
+    "savingsIndicator": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.savings-indicator",
+      "required": true
+    },
+    "ctaButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.button",
+      "required": true
+    }
+  }
+}

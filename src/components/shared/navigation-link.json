@@ -1,0 +1,29 @@
+{
+	"collectionName": "components_shared_navigation_links",
+	"info": {
+		"name": "Navigation Link",
+		"icon": "link",
+		"displayName": "Navigation Link",
+		"description": "Individual navigation link with optional dropdown"
+	},
+	"options": {},
+	"attributes": {
+		"text": {
+			"type": "string",
+			"required": true
+		},
+		"url": {
+			"type": "string",
+			"required": false
+		},
+		"hasDropdown": {
+			"type": "boolean",
+			"default": false
+		},
+		"target": {
+			"type": "enumeration",
+			"enum": ["_self", "_blank"],
+			"default": "_self"
+		}
+	}
+}

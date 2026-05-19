@@ -1,0 +1,46 @@
+{
+	"kind": "singleType",
+	"collectionName": "support_centers",
+	"info": {
+		"singularName": "support-center",
+		"pluralName": "support-centers",
+		"displayName": "Support Center Page",
+		"description": "Support Center page content management"
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"pluginOptions": {},
+	"attributes": {
+		"heroSection": {
+			"type": "component",
+			"component": "shared.support-hero-section",
+			"repeatable": false,
+			"required": true
+		},
+		"quickLinksSection": {
+			"type": "component",
+			"component": "shared.quick-links-section",
+			"repeatable": false,
+			"required": false
+		},
+		"contactOptionsSection": {
+			"type": "component",
+			"component": "shared.contact-options-section",
+			"repeatable": false,
+			"required": false
+		},
+		"selfHelpResourcesSection": {
+			"type": "component",
+			"component": "shared.self-help-resources-section",
+			"repeatable": false,
+			"required": false
+		},
+		"seo": {
+			"type": "component",
+			"component": "shared.seo",
+			"repeatable": false,
+			"required": false
+		}
+	}
+}

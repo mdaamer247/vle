@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_shared_promotional_badges",
+  "info": {
+    "name": "Promotional Badge",
+    "icon": "star",
+    "displayName": "Promotional Badge",
+    "description": "Promotional badge with special offer text"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "shape": {
+      "type": "enumeration",
+      "required": false,
+      "default": "blob",
+      "enum": [
+        "blob",
+        "rectangle",
+        "circle",
+        "rounded"
+      ]
+    },
+    "position": {
+      "type": "enumeration",
+      "required": false,
+      "default": "top-right",
+      "enum": [
+        "top-right",
+        "top-left",
+        "bottom-right",
+        "bottom-left",
+        "center"
+      ]
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
+    }
+  }
+}

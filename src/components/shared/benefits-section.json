@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_benefits_sections",
+  "info": {
+    "name": "Benefits Section",
+    "icon": "check",
+    "displayName": "Benefits Section",
+    "description": "Section displaying key benefits and features"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "blocks"
+    },
+    "ctaButton": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false,
+      "required": false
+    },
+    "benefits": {
+      "type": "component",
+      "component": "shared.benefit-item",
+      "repeatable": true,
+      "required": false
+    }
+  }
+}

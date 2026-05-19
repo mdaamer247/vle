@@ -1,0 +1,18 @@
+{
+	"collectionName": "components_shared_service_features_sections",
+	"info": {
+		"name": "Service Features Section",
+		"icon": "layout",
+		"displayName": "Service Features Section",
+		"description": "Main section with service tabs and their dynamic content"
+	},
+	"options": {},
+	"attributes": {
+		"serviceTabs": {
+			"type": "component",
+			"repeatable": false,
+			"component": "shared.service-tabs",
+			"required": true
+		}
+	}
+}

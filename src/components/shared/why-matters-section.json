@@ -1,0 +1,35 @@
+{
+	"collectionName": "components_shared_why_matters_sections",
+	"info": {
+		"name": "Why Matters Section",
+		"icon": "information",
+		"displayName": "Why Matters Section",
+		"description": "Section explaining why digital security matters with statistics"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"subtitle": {
+			"type": "text",
+			"required": false
+		},
+		"description": {
+			"type": "text",
+			"required": false
+		},
+		"statistics": {
+			"type": "component",
+			"repeatable": true,
+			"component": "shared.statistic-item"
+		},
+		"backgroundImage": {
+			"type": "media",
+			"multiple": false,
+			"required": false,
+			"allowedTypes": ["images"]
+		}
+	}
+}
