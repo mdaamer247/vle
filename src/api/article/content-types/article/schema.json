@@ -12,59 +12,70 @@
   },
   "pluginOptions": {},
   "attributes": {
-		"title": {
-			"type": "string"
-		},
-		"description": {
-			"type": "text",
-			"maxLength": 80
-		},
-		"content": {
-			"type": "blocks"
-		},
-		"slug": {
-			"type": "uid",
-			"targetField": "title"
-		},
-		"cover": {
-			"type": "media",
-			"multiple": false,
-			"required": false,
-			"allowedTypes": ["images", "files", "videos"]
-		},
-		"videoUrl": {
-			"type": "string",
-			"required": false
-		},
-		"author": {
-			"type": "relation",
-			"relation": "manyToOne",
-			"target": "api::author.author",
-			"inversedBy": "articles"
-		},
-		"categories": {
-			"type": "relation",
-			"relation": "oneToMany",
-			"target": "api::category.category"
-		},
-		"featuredInResourcePage": {
-			"type": "boolean",
-			"default": false
-		},
-		"recentInResourcePage": {
-			"type": "boolean",
-			"default": false
-		},
-		"issuedAt": {
-			"type": "date"
-		},
-		"metaTitle": {
-			"type": "string",
-			"required": false
-		},
-		"metaDescription": {
-			"type": "text",
-			"required": false
-		}
-	}
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 80
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "videoUrl": {
+      "type": "string",
+      "required": false
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "articles"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "featuredInResourcePage": {
+      "type": "boolean",
+      "default": false
+    },
+    "recentInResourcePage": {
+      "type": "boolean",
+      "default": false
+    },
+    "issuedAt": {
+      "type": "date"
+    },
+    "metaTitle": {
+      "type": "string",
+      "required": false
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": false
+    },
+    "blogVideo": {
+      "type": "customField",
+      "customField": "plugin::video-field.video"
+    },
+    "hamBurgerCategory": {
+      "type": "string"
+    }
+  }
 }

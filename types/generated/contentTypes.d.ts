@@ -452,6 +452,8 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
+    blogVideo: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<'plugin::video-field.video'>;
     categories: Schema.Attribute.Relation<
       'oneToMany',
       'api::category.category'
@@ -467,6 +469,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       }>;
     featuredInResourcePage: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
+    hamBurgerCategory: Schema.Attribute.String;
     issuedAt: Schema.Attribute.Date;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
