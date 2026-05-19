@@ -70,11 +70,7 @@
       "type": "text",
       "required": false
     },
-    "blogVideo": {
-      "type": "customField",
-      "customField": "plugin::video-field.video"
-    },
-    "hamBurgerCategory": {
+    "breadCrumbCategory": {
       "type": "string"
     }
   }
