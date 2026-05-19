@@ -452,6 +452,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
+    breadCrumbCategory: Schema.Attribute.String;
     categories: Schema.Attribute.Relation<
       'oneToMany',
       'api::category.category'
